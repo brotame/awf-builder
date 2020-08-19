@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<!--  This site was created in Webflow. http://www.webflow.com  -->
+<!--  Last Published: Wed Aug 19 2020 16:03:34 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="5f3bef20b0e7a53d1dd83872" data-wf-site="5ee9e5f2c67c989ce5331572">
+<head>
+  <meta charset="utf-8">
+  <title>Multi Steps</title>
+  <meta content="Multi Steps" property="og:title">
+  <meta content="Multi Steps" property="twitter:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/advanced-forms-builder.webflow.css" rel="stylesheet" type="text/css">
+  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon">
+  <!--  Modal Backdrop Blur  -->
+  <style>.modal-overlay{backdrop-filter: blur(0.5rem);}</style>
+</head>
+<body>
+  <div class="page-wrap">
+    <header class="nav-wrap">
+      <a href="https://brota.me/" target="_blank" class="logo-wrap w-inline-block">
+        <div class="logo w-embed"><svg viewbox="0 0 128 128" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M93.1648 128H20.2534C9.088 128 0 118.912 0 107.747V20.2534C0 9.088 9.088 0 20.2534 0H93.1648C112.372 0 128 15.6262 128 34.8352C128 47.0259 121.706 57.7741 112.197 64C121.706 70.2259 128 80.9741 128 93.1648C128 112.374 112.372 128 93.1648 128ZM20.2534 11.3421C17.8908 11.3448 15.6258 12.2845 13.9552 13.9552C12.2845 15.6258 11.3448 17.8908 11.3421 20.2534V107.747C11.3448 110.109 12.2845 112.374 13.9552 114.045C15.6258 115.715 17.8908 116.655 20.2534 116.658H93.1648C106.118 116.658 116.658 106.118 116.658 93.1648C116.658 81.9648 108.782 72.5709 98.2771 70.231C95.3318 86.4768 81.0816 98.8352 64 98.8352C62.4961 98.8352 61.0538 98.2378 59.9904 97.1744C58.927 96.111 58.3296 94.6687 58.3296 93.1648C58.3296 80.9741 64.6221 70.2259 74.1325 64C64.6221 57.7741 58.3296 47.0259 58.3296 34.8352C58.3296 33.3313 58.927 31.889 59.9904 30.8256C61.0538 29.7622 62.4961 29.1648 64 29.1648C81.0816 29.1648 95.3318 41.5232 98.2771 57.769C108.782 55.4291 116.658 46.0352 116.658 34.8352C116.658 21.8816 106.118 11.3421 93.1648 11.3421H20.2534ZM86.5446 70.6202C82.7734 71.737 79.3411 73.7788 76.56 76.56C73.7788 79.3411 71.737 82.7734 70.6202 86.5446C74.3913 85.4276 77.8235 83.3857 80.6046 80.6046C83.3857 77.8235 85.4276 74.3913 86.5446 70.6202ZM70.6202 41.4554C71.737 45.2266 73.7788 48.6589 76.56 51.4401C79.3411 54.2212 82.7734 56.263 86.5446 57.3798C85.4276 53.6087 83.3857 50.1765 80.6046 47.3954C77.8235 44.6143 74.3913 42.5724 70.6202 41.4554Z"></path>
+</svg></div>
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="nav-item w-inline-block">
+          <div class="nav-icon w-embed"><svg viewbox="0 0 34 30" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.800049 5.8H32.8" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M29.8 28.8H3.80005C2.10005 28.8 0.800049 27.5 0.800049 25.8V3.8C0.800049 2.1 2.10005 0.800003 3.80005 0.800003H29.8C31.5 0.800003 32.8 2.1 32.8 3.8V25.8C32.8 27.4 31.4 28.8 29.8 28.8Z" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M14.8 20.8H5.80005V24.8H14.8V20.8Z" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M27.8 9.8H5.80005V16.8H27.8V9.8Z" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M17.8 20.8H27.8" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M17.8 24.8H27.8" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg></div>
+          <div class="nav-text">Intro</div>
+        </a>
+        <a href="multi-steps.html" aria-current="page" class="nav-item w-inline-block w--current">
+          <div class="nav-icon w-embed"><svg viewbox="0 0 42 34" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.800049 27.7H8.80005" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M8.80005 24.8H0.800049V32.8H8.80005V24.8Z" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M16.8 27.7H24.8" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M24.8 24.8H16.8V32.8H24.8V24.8Z" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M32.8 27.7H40.8" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M40.8 24.8H32.8V32.8H40.8V24.8Z" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M20.8 19.8V24.8" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M10.6 17.6L6.49995 19.9C5.39995 20.5 4.69995 21.7 4.69995 23V24.8" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M30.9001 17.6L35.0001 19.9C36.1001 20.5 36.8001 21.7 36.8001 23V24.8" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M21.2001 11.8C18.1001 12 16.6001 8.4 19.0001 6.4C19.4001 6.1 19.9001 5.9 20.4001 5.8C23.5001 5.6 25.0001 9.2 22.6001 11.2C22.2001 11.5 21.7001 11.7 21.2001 11.8Z" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M27.2 7.2C27 6.5 26.7 5.8 26.4 5.2L27.2 3.9L25.6 2.3L24.3 3.1C23.7 2.7 23 2.4 22.3 2.3L21.9 0.800003H19.6L19.2 2.3C18.5 2.5 17.8 2.8 17.2 3.1L15.9 2.3L14.3 3.9L15.1 5.2C14.7 5.8 14.4 6.5 14.3 7.2L12.8 7.6V9.9L14.3 10.3C14.5 11 14.8 11.7 15.1 12.3L14.3 13.6L15.9 15.2L17.2 14.4C17.8 14.8 18.5 15.1 19.2 15.2L19.6 16.7H21.9L22.3 15.2C23 15 23.7 14.7 24.3 14.4L25.6 15.2L27.2 13.6L26.4 12.3C26.8 11.7 27.1 11 27.2 10.3L28.7 9.9V7.6L27.2 7.2Z" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg></div>
+          <div class="nav-text">Multi Steps</div>
+        </a>
+        <a href="conditional-logic.html" class="nav-item w-inline-block">
+          <div class="nav-icon w-embed"><svg viewbox="0 0 38 38" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21.5 6H13.5C12.1 6 11 4.9 11 3.5C11 2.1 12.1 1 13.5 1H21.5C22.9 1 24 2.1 24 3.5C24 4.8 22.8 6 21.5 6Z" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M18 26V28" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M8 17H6C3.8 17 2 18.8 2 21C2 23.2 3.8 25 6 25H33V28" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M27 3H33V11" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M17.6999 13.9L22.9999 17L17.6999 20L12.3999 17L17.6999 13.9Z" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M18 8V11" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M36 14H29V19H36V14Z" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M30 34C30 32.3 31.3 31 33 31C34.7 31 36 32.3 36 34C36 35.7 34.7 37 33 37C31.3 37 30 35.6 30 34Z" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M18 37C16.3 37 15 35.7 15 34C15 32.3 16.3 31 18 31C19.7 31 21 32.3 21 34C21 35.6 19.6 37 18 37Z" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg></div>
+          <div class="nav-text">Conditional Logic</div>
+        </a>
+        <a href="generate-code.html" class="nav-item last w-inline-block">
+          <div class="nav-icon w-embed"><svg viewbox="0 0 34 30" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.800049 5.8H32.8" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M6.80005 15.8L4.80005 13.8L6.80005 11.8" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M14.8 11.8L16.8 13.8L14.8 15.8" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M11.8 9.8L9.80005 17.8" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M16.8 28.8H3.80005C2.10005 28.8 0.800049 27.5 0.800049 25.8V3.8C0.800049 2.1 2.10005 0.800003 3.80005 0.800003H29.8C31.5 0.800003 32.8 2.1 32.8 3.8V12.8" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M28.2001 16.9C26.2001 16.4 24.0001 16.9 22.5001 18.5C20.2001 20.8 20.2001 24.6 22.5001 27L24.2001 25.3" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M25.1001 28.5C27.1001 29.1 29.4001 28.6 31.0001 27C33.3001 24.7 33.3001 20.9 31.0001 18.5L29.3001 20.2" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg></div>
+          <div class="nav-text">Generate Code</div>
+        </a>
+      </nav>
+      <p class="nav-about">A project by <a href="https://webflow.com/alexiglesias" target="_blank">Alex Iglesias</a>.</p>
+    </header>
+    <main class="main">
+      <div class="content-wrap">
+        <section class="section">
+          <div class="container max-w-xl vflex-c-c center">
+            <h1 class="mb-4">Multi Steps</h1>
+            <p class="mb-8">Set up multi-step functionality for your forms.</p>
+            <div class="hero-buttons"><a href="#" class="button w-button">Quick Intro</a><a href="#" class="button outline w-button">Watch Tutorials</a></div>
+          </div>
+          <div class="container max-w-3xl w-form">
+            <div class="logic-block-divider my-12"></div>
+            <form id="email-form" name="email-form" data-name="Email Form">
+              <div class="hflex-c-s mb-6">
+                <h2 class="mb-0 mr-4">Required setup</h2>
+                <div class="control-icon add">
+                  <div class="small-icon w-embed"><svg viewbox="0 0 448 448" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M416 176H272V32C272 14.33 257.67 0 240 0H208C190.33 0 176 14.33 176 32V176H32C14.33 176 0 190.33 0 208V240C0 257.67 14.33 272 32 272H176V416C176 433.67 190.33 448 208 448H240C257.67 448 272 433.67 272 416V272H416C433.67 272 448 257.67 448 240V208C448 190.33 433.67 176 416 176Z"></path>
+</svg></div>
+                </div>
+                <div class="control-icon delete">
+                  <div class="small-icon w-embed"><svg viewbox="0 0 448 96" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M416 0H32C14.33 0 0 14.33 0 32V64C0 81.67 14.33 96 32 96H416C433.67 96 448 81.67 448 64V32C448 14.33 433.67 0 416 0Z"></path>
+</svg></div>
+                </div>
+              </div>
+              <div class="msf-grid first">
+                <div class="msf-block">
+                  <div class="hflex-c-sb mb-6">
+                    <h3 class="mb-0">Webflow setup<span class="sea-green">*</span></h3>
+                    <div class="msf-icon info w-embed"><svg viewbox="0 0 496 496" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M496 248C496 384.997 384.957 496 248 496C111.043 496 0 384.997 0 248C0 111.083 111.043 0 248 0C384.957 0 496 111.083 496 248ZM254.655 82C200.158 82 165.4 104.957 138.106 145.758C134.57 151.044 135.753 158.173 140.821 162.016L175.52 188.326C180.725 192.273 188.141 191.334 192.185 186.204C210.049 163.546 222.298 150.407 249.488 150.407C269.917 150.407 295.186 163.555 295.186 183.365C295.186 198.341 282.823 206.032 262.652 217.341C239.128 230.528 208 246.941 208 288V292C208 298.627 213.373 304 220 304H276C282.627 304 288 298.627 288 292V290.667C288 262.205 371.186 261.02 371.186 184C371.186 125.998 311.021 82 254.655 82V82ZM248 330C222.635 330 202 350.635 202 376C202 401.364 222.635 422 248 422C273.365 422 294 401.364 294 376C294 350.635 273.365 330 248 330Z"></path>
+</svg></div>
+                  </div>
+                  <p>Make sure your form meets the following requirements:</p>
+                  <ul role="list">
+                    <li>It has a submit button set to <span class="opacity-75">display:none</span>. The script will use the button text and waiting text.</li>
+                    <li>
+                      <p class="mb-2">It has a slider inside it. The slider should have:</p>
+                      <ul role="list">
+                        <li class="mb-1">Swipe gestures <span class="opacity-75">deactivated</span>.</li>
+                        <li class="mb-1">Auto-play slides <span class="opacity-75">deactivated</span>.</li>
+                        <li class="mb-1">Its height forced to be <span class="opacity-75">auto</span>.</li>
+                        <li>The slider arrows and nav set to <span class="opacity-75">display:none</span>.</li>
+                      </ul>
+                    </li>
+                  </ul><a href="#" class="button w-button">Copy Starter Form</a></div>
+                <div class="msf-block">
+                  <div class="hflex-c-sb mb-6">
+                    <h3 class="mb-0">Elements<span class="sea-green">*</span></h3>
+                    <div class="msf-icon info w-embed"><svg viewbox="0 0 496 496" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M496 248C496 384.997 384.957 496 248 496C111.043 496 0 384.997 0 248C0 111.083 111.043 0 248 0C384.957 0 496 111.083 496 248ZM254.655 82C200.158 82 165.4 104.957 138.106 145.758C134.57 151.044 135.753 158.173 140.821 162.016L175.52 188.326C180.725 192.273 188.141 191.334 192.185 186.204C210.049 163.546 222.298 150.407 249.488 150.407C269.917 150.407 295.186 163.555 295.186 183.365C295.186 198.341 282.823 206.032 262.652 217.341C239.128 230.528 208 246.941 208 288V292C208 298.627 213.373 304 220 304H276C282.627 304 288 298.627 288 292V290.667C288 262.205 371.186 261.02 371.186 184C371.186 125.998 311.021 82 254.655 82V82ZM248 330C222.635 330 202 350.635 202 376C202 401.364 222.635 422 248 422C273.365 422 294 401.364 294 376C294 350.635 273.365 330 248 330Z"></path>
+</svg></div>
+                  </div>
+                  <div class="mb-8">
+                    <div class="relative"><label class="input-label">Form ID<span class="sea-green">*</span></label><input type="text" class="input-field w-input" maxlength="256" name="Form" data-name="Form" placeholder="Eg: form-id" id="form" required=""></div>
+                  </div>
+                  <div>
+                    <div class="relative"><label class="input-label">Next Button ID<span class="sea-green">*</span></label><input type="text" class="input-field w-input" maxlength="256" name="Next-Button" data-name="Next Button" placeholder="Eg: next-id" id="next-button" required=""></div>
+                  </div>
+                </div>
+              </div>
+              <div class="hflex-c-s mb-6">
+                <h2 class="mb-0 mr-4">Optional setup</h2>
+                <div class="control-icon add">
+                  <div class="small-icon w-embed"><svg viewbox="0 0 448 448" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M416 176H272V32C272 14.33 257.67 0 240 0H208C190.33 0 176 14.33 176 32V176H32C14.33 176 0 190.33 0 208V240C0 257.67 14.33 272 32 272H176V416C176 433.67 190.33 448 208 448H240C257.67 448 272 433.67 272 416V272H416C433.67 272 448 257.67 448 240V208C448 190.33 433.67 176 416 176Z"></path>
+</svg></div>
+                </div>
+              </div>
+              <div class="msf-grid">
+                <div class="msf-block">
+                  <div class="hflex-c-sb mb-8">
+                    <h3 class="mb-0">Back button<span class="sea-green"></span></h3>
+                    <div class="hflex-c-s">
+                      <div class="msf-icon info w-embed"><svg viewbox="0 0 496 496" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M496 248C496 384.997 384.957 496 248 496C111.043 496 0 384.997 0 248C0 111.083 111.043 0 248 0C384.957 0 496 111.083 496 248ZM254.655 82C200.158 82 165.4 104.957 138.106 145.758C134.57 151.044 135.753 158.173 140.821 162.016L175.52 188.326C180.725 192.273 188.141 191.334 192.185 186.204C210.049 163.546 222.298 150.407 249.488 150.407C269.917 150.407 295.186 163.555 295.186 183.365C295.186 198.341 282.823 206.032 262.652 217.341C239.128 230.528 208 246.941 208 288V292C208 298.627 213.373 304 220 304H276C282.627 304 288 298.627 288 292V290.667C288 262.205 371.186 261.02 371.186 184C371.186 125.998 311.021 82 254.655 82V82ZM248 330C222.635 330 202 350.635 202 376C202 401.364 222.635 422 248 422C273.365 422 294 401.364 294 376C294 350.635 273.365 330 248 330Z"></path>
+</svg></div>
+                      <div class="msf-icon delete ml-4 w-embed"><svg viewbox="0 0 496 496" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M248 0C111 0 0 111 0 248C0 385 111 496 248 496C385 496 496 385 496 248C496 111 385 0 248 0ZM116 288C109.4 288 104 282.6 104 276V220C104 213.4 109.4 208 116 208H380C386.6 208 392 213.4 392 220V276C392 282.6 386.6 288 380 288H116Z"></path>
+</svg></div>
+                    </div>
+                  </div>
+                  <div class="relative"><label class="input-label">Back Button ID:</label><input type="text" class="input-field w-input" maxlength="256" name="Back-Button" data-name="Back Button" placeholder="Eg: back-id" id="Back-Button"></div>
+                </div>
+                <div class="msf-block">
+                  <div class="hflex-c-sb mb-8">
+                    <h3 class="mb-0">Custom Nav links</h3>
+                    <div class="hflex-c-s">
+                      <div class="msf-icon info w-embed"><svg viewbox="0 0 496 496" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M496 248C496 384.997 384.957 496 248 496C111.043 496 0 384.997 0 248C0 111.083 111.043 0 248 0C384.957 0 496 111.083 496 248ZM254.655 82C200.158 82 165.4 104.957 138.106 145.758C134.57 151.044 135.753 158.173 140.821 162.016L175.52 188.326C180.725 192.273 188.141 191.334 192.185 186.204C210.049 163.546 222.298 150.407 249.488 150.407C269.917 150.407 295.186 163.555 295.186 183.365C295.186 198.341 282.823 206.032 262.652 217.341C239.128 230.528 208 246.941 208 288V292C208 298.627 213.373 304 220 304H276C282.627 304 288 298.627 288 292V290.667C288 262.205 371.186 261.02 371.186 184C371.186 125.998 311.021 82 254.655 82V82ZM248 330C222.635 330 202 350.635 202 376C202 401.364 222.635 422 248 422C273.365 422 294 401.364 294 376C294 350.635 273.365 330 248 330Z"></path>
+</svg></div>
+                      <div class="msf-icon delete ml-4 w-embed"><svg viewbox="0 0 496 496" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M248 0C111 0 0 111 0 248C0 385 111 496 248 496C385 496 496 385 496 248C496 111 385 0 248 0ZM116 288C109.4 288 104 282.6 104 276V220C104 213.4 109.4 208 116 208H380C386.6 208 392 213.4 392 220V276C392 282.6 386.6 288 380 288H116Z"></path>
+</svg></div>
+                    </div>
+                  </div>
+                  <p class="mb-0">Add buttons that make the form jump to a specific step. Check the info to learn how to add this functionality in Webflow.</p>
+                </div>
+                <div class="msf-block">
+                  <div class="hflex-c-sb mb-8">
+                    <h3 class="mb-0">Next button text<span class="sea-green"></span></h3>
+                    <div class="hflex-c-s">
+                      <div class="msf-icon info w-embed"><svg viewbox="0 0 496 496" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M496 248C496 384.997 384.957 496 248 496C111.043 496 0 384.997 0 248C0 111.083 111.043 0 248 0C384.957 0 496 111.083 496 248ZM254.655 82C200.158 82 165.4 104.957 138.106 145.758C134.57 151.044 135.753 158.173 140.821 162.016L175.52 188.326C180.725 192.273 188.141 191.334 192.185 186.204C210.049 163.546 222.298 150.407 249.488 150.407C269.917 150.407 295.186 163.555 295.186 183.365C295.186 198.341 282.823 206.032 262.652 217.341C239.128 230.528 208 246.941 208 288V292C208 298.627 213.373 304 220 304H276C282.627 304 288 298.627 288 292V290.667C288 262.205 371.186 261.02 371.186 184C371.186 125.998 311.021 82 254.655 82V82ZM248 330C222.635 330 202 350.635 202 376C202 401.364 222.635 422 248 422C273.365 422 294 401.364 294 376C294 350.635 273.365 330 248 330Z"></path>
+</svg></div>
+                      <div class="msf-icon delete ml-4 w-embed"><svg viewbox="0 0 496 496" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M248 0C111 0 0 111 0 248C0 385 111 496 248 496C385 496 496 385 496 248C496 111 385 0 248 0ZM116 288C109.4 288 104 282.6 104 276V220C104 213.4 109.4 208 116 208H380C386.6 208 392 213.4 392 220V276C392 282.6 386.6 288 380 288H116Z"></path>
+</svg></div>
+                    </div>
+                  </div>
+                  <div class="hflex-c-sb no-wrap">
+                    <div class="relative _w-1-4">
+                      <div class="input-label">Step</div><input type="number" class="input-field w-input" maxlength="256" name="Next-Text-Step" data-name="Next Text Step" placeholder="1" id="next-text-step"></div>
+                    <div class="relative flex-auto mx-2">
+                      <div class="input-label">Text</div><input type="text" class="input-field w-input" maxlength="256" name="Next-Text" data-name="Next Text" placeholder="Eg: Next Step" id="next-text"></div>
+                    <div class="control-icon add">
+                      <div class="small-icon w-embed"><svg viewbox="0 0 448 448" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M416 176H272V32C272 14.33 257.67 0 240 0H208C190.33 0 176 14.33 176 32V176H32C14.33 176 0 190.33 0 208V240C0 257.67 14.33 272 32 272H176V416C176 433.67 190.33 448 208 448H240C257.67 448 272 433.67 272 416V272H416C433.67 272 448 257.67 448 240V208C448 190.33 433.67 176 416 176Z"></path>
+</svg></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="msf-block">
+                  <div class="hflex-c-sb mb-8">
+                    <h3 class="mb-0">Back button text<span class="sea-green"></span></h3>
+                    <div class="hflex-c-s">
+                      <div class="msf-icon info w-embed"><svg viewbox="0 0 496 496" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M496 248C496 384.997 384.957 496 248 496C111.043 496 0 384.997 0 248C0 111.083 111.043 0 248 0C384.957 0 496 111.083 496 248ZM254.655 82C200.158 82 165.4 104.957 138.106 145.758C134.57 151.044 135.753 158.173 140.821 162.016L175.52 188.326C180.725 192.273 188.141 191.334 192.185 186.204C210.049 163.546 222.298 150.407 249.488 150.407C269.917 150.407 295.186 163.555 295.186 183.365C295.186 198.341 282.823 206.032 262.652 217.341C239.128 230.528 208 246.941 208 288V292C208 298.627 213.373 304 220 304H276C282.627 304 288 298.627 288 292V290.667C288 262.205 371.186 261.02 371.186 184C371.186 125.998 311.021 82 254.655 82V82ZM248 330C222.635 330 202 350.635 202 376C202 401.364 222.635 422 248 422C273.365 422 294 401.364 294 376C294 350.635 273.365 330 248 330Z"></path>
+</svg></div>
+                      <div class="msf-icon delete ml-4 w-embed"><svg viewbox="0 0 496 496" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M248 0C111 0 0 111 0 248C0 385 111 496 248 496C385 496 496 385 496 248C496 111 385 0 248 0ZM116 288C109.4 288 104 282.6 104 276V220C104 213.4 109.4 208 116 208H380C386.6 208 392 213.4 392 220V276C392 282.6 386.6 288 380 288H116Z"></path>
+</svg></div>
+                    </div>
+                  </div>
+                  <div class="hflex-c-sb no-wrap">
+                    <div class="relative _w-1-4">
+                      <div class="input-label">Step</div><input type="number" class="input-field w-input" maxlength="256" name="Back-Text-Step" data-name="Back Text Step" placeholder="1" id="back-text-step"></div>
+                    <div class="relative flex-auto mx-2">
+                      <div class="input-label">Text</div><input type="text" class="input-field w-input" maxlength="256" name="Back-Text" data-name="Back Text" placeholder="Eg: Go Back" id="back-text"></div>
+                    <div class="control-icon add">
+                      <div class="small-icon w-embed"><svg viewbox="0 0 448 448" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M416 176H272V32C272 14.33 257.67 0 240 0H208C190.33 0 176 14.33 176 32V176H32C14.33 176 0 190.33 0 208V240C0 257.67 14.33 272 32 272H176V416C176 433.67 190.33 448 208 448H240C257.67 448 272 433.67 272 416V272H416C433.67 272 448 257.67 448 240V208C448 190.33 433.67 176 416 176Z"></path>
+</svg></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="msf-block">
+                  <div class="hflex-c-sb mb-8">
+                    <h3 class="mb-0">Warning class<span class="sea-green"></span></h3>
+                    <div class="hflex-c-s">
+                      <div class="msf-icon info w-embed"><svg viewbox="0 0 496 496" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M496 248C496 384.997 384.957 496 248 496C111.043 496 0 384.997 0 248C0 111.083 111.043 0 248 0C384.957 0 496 111.083 496 248ZM254.655 82C200.158 82 165.4 104.957 138.106 145.758C134.57 151.044 135.753 158.173 140.821 162.016L175.52 188.326C180.725 192.273 188.141 191.334 192.185 186.204C210.049 163.546 222.298 150.407 249.488 150.407C269.917 150.407 295.186 163.555 295.186 183.365C295.186 198.341 282.823 206.032 262.652 217.341C239.128 230.528 208 246.941 208 288V292C208 298.627 213.373 304 220 304H276C282.627 304 288 298.627 288 292V290.667C288 262.205 371.186 261.02 371.186 184C371.186 125.998 311.021 82 254.655 82V82ZM248 330C222.635 330 202 350.635 202 376C202 401.364 222.635 422 248 422C273.365 422 294 401.364 294 376C294 350.635 273.365 330 248 330Z"></path>
+</svg></div>
+                      <div class="msf-icon delete ml-4 w-embed"><svg viewbox="0 0 496 496" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M248 0C111 0 0 111 0 248C0 385 111 496 248 496C385 496 496 385 496 248C496 111 385 0 248 0ZM116 288C109.4 288 104 282.6 104 276V220C104 213.4 109.4 208 116 208H380C386.6 208 392 213.4 392 220V276C392 282.6 386.6 288 380 288H116Z"></path>
+</svg></div>
+                    </div>
+                  </div>
+                  <div class="relative"><label for="Warning-Class-2" class="input-label">Warning Class</label><input type="text" class="input-field w-input" maxlength="256" name="Warning-Class" data-name="Warning Class" placeholder="Eg: warning" id="warning-class"></div>
+                </div>
+                <div class="msf-block">
+                  <div class="hflex-c-sb mb-8">
+                    <h3 class="mb-0">Alert text<span class="sea-green"></span></h3>
+                    <div class="hflex-c-s">
+                      <div class="msf-icon info w-embed"><svg viewbox="0 0 496 496" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M496 248C496 384.997 384.957 496 248 496C111.043 496 0 384.997 0 248C0 111.083 111.043 0 248 0C384.957 0 496 111.083 496 248ZM254.655 82C200.158 82 165.4 104.957 138.106 145.758C134.57 151.044 135.753 158.173 140.821 162.016L175.52 188.326C180.725 192.273 188.141 191.334 192.185 186.204C210.049 163.546 222.298 150.407 249.488 150.407C269.917 150.407 295.186 163.555 295.186 183.365C295.186 198.341 282.823 206.032 262.652 217.341C239.128 230.528 208 246.941 208 288V292C208 298.627 213.373 304 220 304H276C282.627 304 288 298.627 288 292V290.667C288 262.205 371.186 261.02 371.186 184C371.186 125.998 311.021 82 254.655 82V82ZM248 330C222.635 330 202 350.635 202 376C202 401.364 222.635 422 248 422C273.365 422 294 401.364 294 376C294 350.635 273.365 330 248 330Z"></path>
+</svg></div>
+                      <div class="msf-icon delete ml-4 w-embed"><svg viewbox="0 0 496 496" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M248 0C111 0 0 111 0 248C0 385 111 496 248 496C385 496 496 385 496 248C496 111 385 0 248 0ZM116 288C109.4 288 104 282.6 104 276V220C104 213.4 109.4 208 116 208H380C386.6 208 392 213.4 392 220V276C392 282.6 386.6 288 380 288H116Z"></path>
+</svg></div>
+                    </div>
+                  </div>
+                  <div class="relative"><label for="Warning-Class-2" class="input-label">Alert Text</label><input type="text" class="input-field w-input" maxlength="256" name="alert-text" data-name="Alert Text" placeholder="Eg: Please, fill all the inputs." id="alert-text"></div>
+                </div>
+                <div class="msf-block">
+                  <div class="hflex-c-sb mb-8">
+                    <h3 class="mb-0">Alert element<span class="sea-green"></span></h3>
+                    <div class="hflex-c-s">
+                      <div class="msf-icon info w-embed"><svg viewbox="0 0 496 496" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M496 248C496 384.997 384.957 496 248 496C111.043 496 0 384.997 0 248C0 111.083 111.043 0 248 0C384.957 0 496 111.083 496 248ZM254.655 82C200.158 82 165.4 104.957 138.106 145.758C134.57 151.044 135.753 158.173 140.821 162.016L175.52 188.326C180.725 192.273 188.141 191.334 192.185 186.204C210.049 163.546 222.298 150.407 249.488 150.407C269.917 150.407 295.186 163.555 295.186 183.365C295.186 198.341 282.823 206.032 262.652 217.341C239.128 230.528 208 246.941 208 288V292C208 298.627 213.373 304 220 304H276C282.627 304 288 298.627 288 292V290.667C288 262.205 371.186 261.02 371.186 184C371.186 125.998 311.021 82 254.655 82V82ZM248 330C222.635 330 202 350.635 202 376C202 401.364 222.635 422 248 422C273.365 422 294 401.364 294 376C294 350.635 273.365 330 248 330Z"></path>
+</svg></div>
+                      <div class="msf-icon delete ml-4 w-embed"><svg viewbox="0 0 496 496" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M248 0C111 0 0 111 0 248C0 385 111 496 248 496C385 496 496 385 496 248C496 111 385 0 248 0ZM116 288C109.4 288 104 282.6 104 276V220C104 213.4 109.4 208 116 208H380C386.6 208 392 213.4 392 220V276C392 282.6 386.6 288 380 288H116Z"></path>
+</svg></div>
+                    </div>
+                  </div>
+                  <div class="relative mb-6"><label for="Alert-Display" class="input-label">Display method</label><select id="alert-display" name="Alert-Display" data-name="Alert Display" class="input-field w-select"><option value="default">Default</option><option value="custom">Webflow Interaction</option></select></div>
+                  <div class="relative"><label for="Alert-ID" class="input-label">Element ID</label><input type="text" class="input-field w-input" maxlength="256" name="Alert-ID" data-name="Alert ID" placeholder="Eg: alert-element" id="alert-id"></div>
+                </div>
+                <div class="msf-block">
+                  <div class="hflex-c-sb mb-8">
+                    <h3 class="mb-0">Extra options<span class="sea-green"></span></h3>
+                    <div class="hflex-c-s">
+                      <div class="msf-icon info w-embed"><svg viewbox="0 0 496 496" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M496 248C496 384.997 384.957 496 248 496C111.043 496 0 384.997 0 248C0 111.083 111.043 0 248 0C384.957 0 496 111.083 496 248ZM254.655 82C200.158 82 165.4 104.957 138.106 145.758C134.57 151.044 135.753 158.173 140.821 162.016L175.52 188.326C180.725 192.273 188.141 191.334 192.185 186.204C210.049 163.546 222.298 150.407 249.488 150.407C269.917 150.407 295.186 163.555 295.186 183.365C295.186 198.341 282.823 206.032 262.652 217.341C239.128 230.528 208 246.941 208 288V292C208 298.627 213.373 304 220 304H276C282.627 304 288 298.627 288 292V290.667C288 262.205 371.186 261.02 371.186 184C371.186 125.998 311.021 82 254.655 82V82ZM248 330C222.635 330 202 350.635 202 376C202 401.364 222.635 422 248 422C273.365 422 294 401.364 294 376C294 350.635 273.365 330 248 330Z"></path>
+</svg></div>
+                      <div class="msf-icon delete ml-4 w-embed"><svg viewbox="0 0 496 496" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M248 0C111 0 0 111 0 248C0 385 111 496 248 496C385 496 496 385 496 248C496 111 385 0 248 0ZM116 288C109.4 288 104 282.6 104 276V220C104 213.4 109.4 208 116 208H380C386.6 208 392 213.4 392 220V276C392 282.6 386.6 288 380 288H116Z"></path>
+</svg></div>
+                    </div>
+                  </div><label class="w-checkbox mb-4"><input type="checkbox" id="checkbox" name="checkbox" data-name="Checkbox" class="w-checkbox-input"><span class="leading-normal w-form-label">Scroll to the top of the form when the user changes step.</span></label><label class="w-checkbox"><input type="checkbox" id="checkbox-2" name="checkbox-2" data-name="Checkbox 2" checked="" class="w-checkbox-input"><span class="leading-normal w-form-label">Hide the navigation buttons when the form submits.</span></label></div>
+                <div class="msf-block">
+                  <div class="hflex-c-sb mb-8">
+                    <h3 class="mb-0">Hidden extra form</h3>
+                    <div class="hflex-c-s">
+                      <div class="msf-icon info w-embed"><svg viewbox="0 0 496 496" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M496 248C496 384.997 384.957 496 248 496C111.043 496 0 384.997 0 248C0 111.083 111.043 0 248 0C384.957 0 496 111.083 496 248ZM254.655 82C200.158 82 165.4 104.957 138.106 145.758C134.57 151.044 135.753 158.173 140.821 162.016L175.52 188.326C180.725 192.273 188.141 191.334 192.185 186.204C210.049 163.546 222.298 150.407 249.488 150.407C269.917 150.407 295.186 163.555 295.186 183.365C295.186 198.341 282.823 206.032 262.652 217.341C239.128 230.528 208 246.941 208 288V292C208 298.627 213.373 304 220 304H276C282.627 304 288 298.627 288 292V290.667C288 262.205 371.186 261.02 371.186 184C371.186 125.998 311.021 82 254.655 82V82ZM248 330C222.635 330 202 350.635 202 376C202 401.364 222.635 422 248 422C273.365 422 294 401.364 294 376C294 350.635 273.365 330 248 330Z"></path>
+</svg></div>
+                      <div class="msf-icon delete ml-4 w-embed"><svg viewbox="0 0 496 496" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M248 0C111 0 0 111 0 248C0 385 111 496 248 496C385 496 496 385 496 248C496 111 385 0 248 0ZM116 288C109.4 288 104 282.6 104 276V220C104 213.4 109.4 208 116 208H380C386.6 208 392 213.4 392 220V276C392 282.6 386.6 288 380 288H116Z"></path>
+</svg></div>
+                    </div>
+                  </div>
+                  <p class="mb-8">Set up an additional form that submits when the user completes a specific step. Check the info to learn how to add this functionality in Webflow.</p>
+                  <div class="relative"><label for="Hidden-Form-Step" class="input-label">Step Goal</label><input type="number" class="input-field w-input" maxlength="256" name="Hidden-Form-Step" data-name="Hidden Form Step" placeholder="Send after step X. Eg: 1" id="hidden-form-step"></div>
+                </div>
+                <div class="msf-block">
+                  <div class="hflex-c-sb mb-8">
+                    <h3 class="mb-0">Display input values</h3>
+                    <div class="hflex-c-s">
+                      <div class="msf-icon info w-embed"><svg viewbox="0 0 496 496" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M496 248C496 384.997 384.957 496 248 496C111.043 496 0 384.997 0 248C0 111.083 111.043 0 248 0C384.957 0 496 111.083 496 248ZM254.655 82C200.158 82 165.4 104.957 138.106 145.758C134.57 151.044 135.753 158.173 140.821 162.016L175.52 188.326C180.725 192.273 188.141 191.334 192.185 186.204C210.049 163.546 222.298 150.407 249.488 150.407C269.917 150.407 295.186 163.555 295.186 183.365C295.186 198.341 282.823 206.032 262.652 217.341C239.128 230.528 208 246.941 208 288V292C208 298.627 213.373 304 220 304H276C282.627 304 288 298.627 288 292V290.667C288 262.205 371.186 261.02 371.186 184C371.186 125.998 311.021 82 254.655 82V82ZM248 330C222.635 330 202 350.635 202 376C202 401.364 222.635 422 248 422C273.365 422 294 401.364 294 376C294 350.635 273.365 330 248 330Z"></path>
+</svg></div>
+                      <div class="msf-icon delete ml-4 w-embed"><svg viewbox="0 0 496 496" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M248 0C111 0 0 111 0 248C0 385 111 496 248 496C385 496 496 385 496 248C496 111 385 0 248 0ZM116 288C109.4 288 104 282.6 104 276V220C104 213.4 109.4 208 116 208H380C386.6 208 392 213.4 392 220V276C392 282.6 386.6 288 380 288H116Z"></path>
+</svg></div>
+                    </div>
+                  </div>
+                  <p class="mb-0">Check the info to learn how to add this functionality in Webflow.</p>
+                </div>
+                <div class="msf-block">
+                  <div class="hflex-c-sb mb-8">
+                    <h3 class="mb-0">Display completed %</h3>
+                    <div class="hflex-c-s">
+                      <div class="msf-icon info w-embed"><svg viewbox="0 0 496 496" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M496 248C496 384.997 384.957 496 248 496C111.043 496 0 384.997 0 248C0 111.083 111.043 0 248 0C384.957 0 496 111.083 496 248ZM254.655 82C200.158 82 165.4 104.957 138.106 145.758C134.57 151.044 135.753 158.173 140.821 162.016L175.52 188.326C180.725 192.273 188.141 191.334 192.185 186.204C210.049 163.546 222.298 150.407 249.488 150.407C269.917 150.407 295.186 163.555 295.186 183.365C295.186 198.341 282.823 206.032 262.652 217.341C239.128 230.528 208 246.941 208 288V292C208 298.627 213.373 304 220 304H276C282.627 304 288 298.627 288 292V290.667C288 262.205 371.186 261.02 371.186 184C371.186 125.998 311.021 82 254.655 82V82ZM248 330C222.635 330 202 350.635 202 376C202 401.364 222.635 422 248 422C273.365 422 294 401.364 294 376C294 350.635 273.365 330 248 330Z"></path>
+</svg></div>
+                      <div class="msf-icon delete ml-4 w-embed"><svg viewbox="0 0 496 496" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M248 0C111 0 0 111 0 248C0 385 111 496 248 496C385 496 496 385 496 248C496 111 385 0 248 0ZM116 288C109.4 288 104 282.6 104 276V220C104 213.4 109.4 208 116 208H380C386.6 208 392 213.4 392 220V276C392 282.6 386.6 288 380 288H116Z"></path>
+</svg></div>
+                    </div>
+                  </div>
+                  <div class="relative"><label for="Completed-Percentage" class="input-label">Text Element ID</label><input type="text" class="input-field w-input" maxlength="256" name="Completed-Percentage" data-name="Completed Percentage" placeholder="Eg: completed" id="completed-percentage"></div>
+                </div>
+                <div class="msf-block">
+                  <div class="hflex-c-sb mb-8">
+                    <h3 class="mb-0">Display current step</h3>
+                    <div class="hflex-c-s">
+                      <div class="msf-icon info w-embed"><svg viewbox="0 0 496 496" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M496 248C496 384.997 384.957 496 248 496C111.043 496 0 384.997 0 248C0 111.083 111.043 0 248 0C384.957 0 496 111.083 496 248ZM254.655 82C200.158 82 165.4 104.957 138.106 145.758C134.57 151.044 135.753 158.173 140.821 162.016L175.52 188.326C180.725 192.273 188.141 191.334 192.185 186.204C210.049 163.546 222.298 150.407 249.488 150.407C269.917 150.407 295.186 163.555 295.186 183.365C295.186 198.341 282.823 206.032 262.652 217.341C239.128 230.528 208 246.941 208 288V292C208 298.627 213.373 304 220 304H276C282.627 304 288 298.627 288 292V290.667C288 262.205 371.186 261.02 371.186 184C371.186 125.998 311.021 82 254.655 82V82ZM248 330C222.635 330 202 350.635 202 376C202 401.364 222.635 422 248 422C273.365 422 294 401.364 294 376C294 350.635 273.365 330 248 330Z"></path>
+</svg></div>
+                      <div class="msf-icon delete ml-4 w-embed"><svg viewbox="0 0 496 496" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M248 0C111 0 0 111 0 248C0 385 111 496 248 496C385 496 496 385 496 248C496 111 385 0 248 0ZM116 288C109.4 288 104 282.6 104 276V220C104 213.4 109.4 208 116 208H380C386.6 208 392 213.4 392 220V276C392 282.6 386.6 288 380 288H116Z"></path>
+</svg></div>
+                    </div>
+                  </div>
+                  <div class="relative"><label for="Current-Step" class="input-label">Text Element ID</label><input type="text" class="input-field w-input" maxlength="256" name="Current-Step" data-name="Current Step" placeholder="Eg: current-step" id="current-step"></div>
+                </div>
+              </div>
+            </form>
+            <div class="w-form-done">
+              <div>Thank you! Your submission has been received!</div>
+            </div>
+            <div class="w-form-fail">
+              <div>Oops! Something went wrong while submitting the form.</div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="modal">
+        <div class="modal-content-wrap">
+          <div class="modal-content">
+            <div class="vflex-str-s">
+              <h3 class="mb-2">Step 1</h3>
+              <div class="logic-block-divider mb-4"></div>
+              <p>Build your form in the Webflow Designer as you would normally do.<br></p>
+              <p>Make sure each target <span class="opacity-75">(element that will be affected by an action)</span> is wrapped in a <em>Div Block</em> that has the custom attribute:<br></p>
+              <ul role="list" class="list-none">
+                <li><strong>Name:</strong> data-logic</li>
+                <li><strong>Value:</strong> parent</li>
+              </ul>
+              <div class="hflex-c-sb mt-auto">
+                <div class="modal-nav opacity-0">
+                  <div class="icon mr-2 w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M136.97 252.485L144.041 245.415C148.727 240.729 148.727 233.131 144.041 228.444L60.113 145H436C442.627 145 448 139.627 448 133V123C448 116.373 442.627 111 436 111H60.113L144.041 27.556C148.727 22.87 148.727 15.272 144.041 10.585L136.97 3.515C132.284 -1.171 124.686 -1.171 120 3.515L3.51499 119.515C-1.17101 124.201 -1.17101 131.799 3.51499 136.486L120 252.486C124.686 257.172 132.284 257.172 136.97 252.485Z"></path>
+</svg></div>
+                  <div class="uppercase">Back</div>
+                </div>
+                <div class="modal-nav">
+                  <div class="uppercase mr-2">NEXT</div>
+                  <div class="icon w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M311.03 3.51501L303.959 10.585C299.273 15.271 299.273 22.869 303.959 27.556L387.887 111H12C5.373 111 0 116.373 0 123V133C0 139.627 5.373 145 12 145H387.887L303.959 228.444C299.273 233.13 299.273 240.728 303.959 245.415L311.03 252.485C315.716 257.171 323.314 257.171 328 252.485L444.485 136.485C449.171 131.799 449.171 124.201 444.485 119.514L328 3.51501C323.314 -1.17199 315.716 -1.17199 311.03 3.51501Z"></path>
+</svg></div>
+                </div>
+              </div>
+            </div>
+            <div scroll="enable" class="modal-close">
+              <div class="_w-full vflex-str-c w-embed"><svg viewbox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M353.047 256L498.604 110.444C516.465 92.5818 516.465 63.6218 498.604 45.7455L466.255 13.3964C448.393 -4.46545 419.433 -4.46545 401.556 13.3964L256 158.953L110.444 13.3964C92.5818 -4.46545 63.6218 -4.46545 45.7455 13.3964L13.3964 45.7455C-4.46545 63.6073 -4.46545 92.5673 13.3964 110.444L158.953 256L13.3964 401.556C-4.46545 419.418 -4.46545 448.378 13.3964 466.255L45.7455 498.604C63.6073 516.465 92.5818 516.465 110.444 498.604L256 353.047L401.556 498.604C419.418 516.465 448.393 516.465 466.255 498.604L498.604 466.255C516.465 448.393 516.465 419.433 498.604 401.556L353.047 256Z"></path>
+</svg></div>
+            </div><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="rounded-4"></div>
+        </div>
+        <div scroll="enable" class="modal-overlay"></div>
+      </div>
+    </main>
+    <div class="msf-modal">
+      <div class="msf-modal-content">
+        <h3 class="center">Add optional</h3>
+        <ul role="list" class="msf-optional-list">
+          <li class="msf-optional">Back Button</li>
+          <li class="msf-optional">Custom Nav Links</li>
+          <li class="msf-optional">Next Button Text</li>
+          <li class="msf-optional">Back Button Text</li>
+          <li class="msf-optional">Warning Class</li>
+          <li class="msf-optional">Alert Text</li>
+          <li class="msf-optional">Alert Element</li>
+          <li class="msf-optional">Extra Options</li>
+          <li class="msf-optional">Hidden Extra Form</li>
+          <li class="msf-optional">Display Input Values</li>
+          <li class="msf-optional">Display Completed %</li>
+          <li class="msf-optional">Display Current Step</li>
+        </ul>
+      </div>
+      <div class="msf-modal-overlay"></div>
+    </div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js?site=5ee9e5f2c67c989ce5331572" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <!--  Disable scroll  -->
+  <script>var Webflow=Webflow || [];const $body=$(document.body);let scrollPosition=0;Webflow.push(function (){$('[scroll=disable]').on('click', function (){let oldWidth=$body.innerWidth(); scrollPosition=window.pageYOffset; $body.css('overflow', 'hidden'); $body.css('position', 'fixed'); $body.css('top', `-${scrollPosition}px`); $body.width(oldWidth);}); $('[scroll=enable]').on('click', function (){if ($body.css('overflow') !='hidden'){scrollPosition=window.pageYOffset;}$body.css('overflow', ''); $body.css('position', ''); $body.css('top', ''); $body.width(''); $(window).scrollTop(scrollPosition);}); $('[scroll=both]').on('click', function (){if ($body.css('overflow') !='hidden'){let oldWidth=$body.innerWidth(); scrollPosition=window.pageYOffset; $body.css('overflow', 'hidden'); $body.css('position', 'fixed'); $body.css('top', `-${scrollPosition}px`); $body.width(oldWidth);}else{$body.css('overflow', ''); $body.css('position', ''); $body.css('top', ''); $body.width(''); $(window).scrollTop(scrollPosition);}});});</script>
+</body>
+</html>
