@@ -219,17 +219,13 @@ label {
   transition: background-color 250ms ease;
   color: #fff;
   text-align: center;
+  text-transform: capitalize;
   cursor: pointer;
 }
 
 .button:hover {
   background-color: #88d498;
   color: #fff;
-}
-
-.button:focus {
-  border-color: #88d498;
-  background-color: #88d498;
 }
 
 .button.outline {
@@ -246,22 +242,10 @@ label {
   color: #fff;
 }
 
-.button.outline:focus {
-  background-color: #88d498;
-  color: #fff;
-}
-
 .button.error {
   border-color: #ee6457;
   background-color: #ee6457;
   cursor: not-allowed;
-}
-
-.button.has-icon {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .hflex-c-sb {
@@ -583,7 +567,10 @@ label {
   right: 0%;
   bottom: 0%;
   z-index: 999;
-  display: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -597,6 +584,26 @@ label {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.modal.msf {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
 }
 
 .modal-overlay {
@@ -855,7 +862,7 @@ label {
   min-height: 100vh;
 }
 
-.control-icon {
+.control-button {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -887,23 +894,23 @@ label {
   cursor: pointer;
 }
 
-.control-icon.delete {
+.control-button.delete {
   background-color: rgba(238, 100, 87, 0.5);
 }
 
-.control-icon.delete:hover {
+.control-button.delete:hover {
   background-color: #ee6457;
 }
 
-.control-icon.add {
+.control-button.add {
   background-color: #1a936f;
 }
 
-.control-icon.add:hover {
+.control-button.add:hover {
   background-color: #88d498;
 }
 
-.control-icon.copy {
+.control-button.copy {
   position: absolute;
   left: auto;
   top: 1rem;
@@ -912,7 +919,7 @@ label {
   background-color: #1a936f;
 }
 
-.control-icon.copy:hover {
+.control-button.copy:hover {
   background-color: #88d498;
 }
 
@@ -1099,13 +1106,6 @@ label {
   margin-left: 0.5rem;
 }
 
-.flex-grow {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
 ._w-auto {
   width: auto;
 }
@@ -1221,7 +1221,28 @@ label {
 }
 
 .checkbox {
-  margin-top: 0px;
+  position: relative;
+  top: 0.25rem;
+  margin-top: 0rem;
+  margin-right: 0.5rem;
+  margin-left: 0rem;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  border-color: #c6dabf;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.checkbox.w--redirected-checked {
+  border-color: #c6dabf;
+  background-color: #1a936f;
+}
+
+.checkbox.w--redirected-focus {
+  border-color: #c6dabf;
+  box-shadow: none;
 }
 
 .mb-3 {
@@ -1253,10 +1274,6 @@ label {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 
 .min-h-screen {
@@ -1305,8 +1322,9 @@ label {
   box-shadow: 0 4px 8px 0 rgba(17, 75, 95, 0.1);
 }
 
-.msf-icon {
+.mini-button {
   position: relative;
+  top: -0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1322,19 +1340,19 @@ label {
   cursor: pointer;
 }
 
-.msf-icon.info {
+.mini-button.info {
   color: #88d498;
 }
 
-.msf-icon.info:hover {
+.mini-button.info:hover {
   color: #1a936f;
 }
 
-.msf-icon.delete {
+.mini-button.delete {
   color: rgba(238, 100, 87, 0.5);
 }
 
-.msf-icon.delete:hover {
+.mini-button.delete:hover {
   color: #ee6457;
 }
 
@@ -1371,30 +1389,6 @@ label {
 
 ._w-1-4 {
   width: 25%;
-}
-
-.msf-modal {
-  position: fixed;
-  left: 0%;
-  top: 0%;
-  right: 0%;
-  bottom: 0%;
-  z-index: 10;
-  display: none;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-
-.msf-modal-overlay {
-  position: absolute;
-  left: 0%;
-  top: 0%;
-  right: 0%;
-  bottom: 0%;
-  background-color: #fff;
-  opacity: 0.25;
 }
 
 .msf-modal-content {
@@ -1444,6 +1438,42 @@ label {
   list-style-type: none;
 }
 
+.checkbox-field {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0rem;
+  padding-left: 0rem;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.checkbox-field.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
+.flex-initial {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+}
+
+.justify-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 @media screen and (max-width: 991px) {
   h1 {
     font-size: 2.5rem;
@@ -1484,8 +1514,8 @@ label {
     height: auto;
     max-height: none;
     max-width: none;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
@@ -1524,8 +1554,6 @@ label {
   }
   .nav-item {
     margin-bottom: 0rem;
-    padding-top: 0rem;
-    padding-bottom: 0rem;
   }
   .nav-icon {
     margin-right: 0rem;
@@ -1622,6 +1650,10 @@ label {
   .nav-wrap {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
+  }
+  .logic-block {
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
   .logic-block.mb-4 {
     padding-right: 1rem;
