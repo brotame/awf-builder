@@ -1,19 +1,27 @@
-// Imports
+// Helpers
+import stringifyObject from 'stringify-object';
+
+// Svelte
 import { derived } from 'svelte/store';
+
+// Stores
 import msfStore from './msf';
 import { logicExport } from './logic';
-import stringifyObject from 'stringify-object';
+
+// Constants
+import { scriptSrc } from '../constants';
 
 const generatedCode = derived(
   [logicExport, msfStore],
   ([$logicExport, $msfStore]) => {
-    const script = `<script src="https://cdn.jsdelivr.net/gh/brotame/advanced-webflow-forms@master/conditional-logic/dist/logic.js"><\/script>`;
+    const script = `<script src="${scriptSrc}"><\/script>`;
 
     const msfString =
       $msfStore.formSelector && $msfStore.nextSelector
         ? `new MSF(${stringifyObject($msfStore, {
             inlineCharacterLimit: 99999,
-          })});`
+          })});
+      `
         : '';
 
     const logicString =
@@ -31,8 +39,7 @@ const generatedCode = derived(
     <script>
     var Webflow = Webflow || [];
     Webflow.push(function () {
-      ${msfString}
-      ${logicString}
+      ${msfString}${logicString}
     )};
     <\/script>
     `;

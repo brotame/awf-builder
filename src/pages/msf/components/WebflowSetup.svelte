@@ -1,3 +1,48 @@
+<script lang="ts">
+  // Constants
+  import { starterForm } from '../../../constants';
+
+  // Types
+  type Notification = 'success' | 'error';
+
+  // Variables
+  let notification: Notification = undefined;
+  let buttonText = 'Copy Starter Form';
+
+  // Reactive
+  $: if (notification === 'success')
+    buttonText = 'Copied! Paste it in Webflow :)';
+  else if (notification === 'error') buttonText = 'An error ocurred';
+  else buttonText = 'Copy Starter Form';
+
+  // Functions
+  function createCopy() {
+    document.execCommand('copy');
+  }
+
+  function handleCopy(e: ClipboardEvent) {
+    try {
+      e.clipboardData.setData(
+        'application/json',
+        JSON.stringify(starterForm).trim()
+      );
+      e.preventDefault();
+      triggerNotification('success');
+    } catch {
+      triggerNotification('error');
+    }
+  }
+
+  function triggerNotification(state: Notification) {
+    if (notification) return;
+
+    notification = state;
+    setTimeout(() => {
+      notification = undefined;
+    }, 2000);
+  }
+</script>
+
 <p>Make sure your form meets the following requirements:</p>
 <ul role="list">
   <li>
@@ -31,4 +76,11 @@
     </ul>
   </li>
 </ul>
-<button class="button w-button">Copy Starter Form</button>
+<p
+  class="button w-button"
+  role="button"
+  class:error={notification === 'error'}
+  on:click={createCopy}
+  on:copy={handleCopy}>
+  {buttonText}
+</p>
