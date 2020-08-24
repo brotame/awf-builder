@@ -7,38 +7,7 @@ import type { Logic } from '../types';
 // Helpers
 import { cloneDeep } from 'lodash-es';
 
-const defaults: Logic[] = [
-  {
-    id: 'f0df0eeb-e65a-45c4-8d08-fdebcf6ad2d1',
-    conditions: [
-      {
-        selector: 'options',
-        type: 'text',
-        operator: 'not-equal',
-        value: 'Contact Info',
-      },
-      {
-        selector: 'demo',
-        type: 'radios',
-        operator: 'greater-equal',
-        value: '10',
-      },
-    ],
-    operator: 'or',
-    actions: [
-      {
-        selector: 'contact-info',
-        action: 'hide',
-        clear: false,
-      },
-      {
-        selector: 'test',
-        action: 'disable',
-        clear: true,
-      },
-    ],
-  },
-];
+const defaults: Logic[] = [];
 
 const logicStore = writable(defaults);
 
@@ -74,18 +43,21 @@ export const logicExport = derived(
       delete logic.id;
 
       logic.conditions.forEach((condition) => {
-        condition.type === 'radios'
-          ? (condition.selector = `input[name="${condition.selector}"]:checked`)
-          : (condition.selector = `#${condition.selector}`);
+        if (condition.type === 'radios') {
+          condition.selector = `input[name="${condition.selector}"]:checked`;
+        } else {
+          if (!condition.selector.startsWith('#'))
+            condition.selector = `#${condition.selector}`;
+        }
 
         if (condition.operator === 'checked') {
-          condition.operator = 'equal';
           condition.value = 'true';
+          condition.operator = 'equal';
         }
 
         if (condition.operator === 'not-checked') {
-          condition.operator = 'equal';
           condition.value = 'false';
+          condition.operator = 'equal';
         }
 
         delete condition.type;

@@ -20,17 +20,19 @@ export type ConditionOperator =
   | 'checked'
   | 'not-checked';
 
+export type ConditionType =
+  | 'text'
+  | 'email'
+  | 'password'
+  | 'phone'
+  | 'number'
+  | 'select'
+  | 'radios'
+  | 'checkbox';
+
 export interface Condition {
   selector: string;
-  type:
-    | 'text'
-    | 'email'
-    | 'password'
-    | 'phone'
-    | 'number'
-    | 'select'
-    | 'radios'
-    | 'checkbox';
+  type: ConditionType;
   operator: ConditionOperator;
   value?: string | number;
 }
@@ -60,33 +62,37 @@ export interface Logic {
 export interface Slide {
   title: string;
   content: string;
-  image: string;
+  video: string;
+}
+
+export interface SlidesObj {
+  [key: string]: Slide[];
 }
 
 export interface SelectOption {
   name: string;
   value: string;
+  disabled?: boolean;
   [x: string]: any;
 }
 
 export interface ButtonText {
   id?: string;
-  step?: number;
+  step?: number | string;
   text?: string;
 }
 
 export interface MSFParams {
-  alertInteraction?: string;
   alertSelector?: string;
   alertText?: string;
-  backButtonText?: ButtonText[];
+  backText?: ButtonText[];
   backSelector?: string;
   completedPercentageSelector?: string;
   currentStepSelector?: string;
   formSelector?: string;
   hiddeButtonsOnSubmit?: boolean;
   hiddenFormStep?: number;
-  nextButtonText?: ButtonText[];
+  nextText?: ButtonText[];
   nextSelector?: string;
   scrollTopOnStepChange?: boolean;
   sendHiddenForm?: boolean;

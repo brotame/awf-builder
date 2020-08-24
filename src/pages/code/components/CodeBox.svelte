@@ -10,23 +10,22 @@
 
   // UI Components
   import ControlButton from '../../../ui/ControlButton.svelte';
+  import Prism from '../../../../public/prism';
 
   // Variables
   let clipboard, code: HTMLElement, copyButton: HTMLElement;
 
   // Functions
-  onMount(
-    () => (clipboard = new Clipboard(copyButton, { target: () => code }))
-  );
+  onMount(() => {
+    clipboard = new Clipboard(copyButton, { target: () => code });
+    Prism.highlightAll();
+  });
 
   onDestroy(() => clipboard.destroy());
 </script>
 
 <svelte:head>
-  <link rel="stylesheet" href="/prism.css" />
-  <script src="/prism.js">
-
-  </script>
+  <link href="/prism.css" rel="stylesheet" />
 </svelte:head>
 
 <div class="container max-w-2xl">

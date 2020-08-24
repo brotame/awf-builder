@@ -18,9 +18,10 @@
   <section class="section">
     <Hero
       title="Webflow Advanced Forms"
-      subtitle="This is a beta version of the builder for testing purposes. The
-      Multi Steps builder is not ready yet, but you can start playing around
-      with the Conditional Logic."
+      subtitle={`Welcome to the <strong>beta</strong> version of the Advanced
+      Forms Builder. Now you can add multi step functionality and conditional
+      logic to your Webflow Forms!<br />Found a bug? Got a request? Let me know
+      <a href="mailto:alex@brota.me?subject=Advanced%20Webflow%20Forms">alex@brota.me</a>.`}
       primaryText="Get Started!"
       secondaryText="See Demos"
       on:primaryclick={startBuilder} />

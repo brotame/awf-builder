@@ -1,12 +1,9 @@
 <script lang="ts">
-  //Svelte
-  import { onDestroy } from 'svelte';
-
   // UI Components
   import Input from '../../../ui/Input.svelte';
 
   // Stores
-  import msfStore, { msfActivated } from '../../../stores/msf';
+  import msfStore, { msfActivated, msfCopy } from '../../../stores/msf';
 
   // Variables
   let form = $msfStore.formSelector || '',
@@ -14,6 +11,7 @@
 
   // Reactive
   $: if (!$msfActivated) deleteParams();
+  $: if ($msfCopy) setDefaults();
   $: if (form.length > 0) $msfStore.formSelector = form;
   else delete $msfStore.formSelector;
   $: if (next.length > 0) $msfStore.nextSelector = next;
@@ -23,6 +21,13 @@
   function deleteParams() {
     delete $msfStore.formSelector;
     delete $msfStore.nextSelector;
+  }
+
+  function setDefaults() {
+    form = '#msf';
+    next = '#msf-next';
+    console.log($msfStore);
+    $msfCopy = false;
   }
 </script>
 

@@ -6,6 +6,12 @@
   // Stores
   import { msfActivated, msfRequired, msfOptional } from '../../stores/msf';
 
+  // Types
+  import type { Slide } from '../../types';
+
+  // Slides
+  import msfSlides from './msf-slides';
+
   // Components
   import AlertElement from './components/AlertElement.svelte';
   import AlertText from './components/AlertText.svelte';
@@ -28,24 +34,26 @@
   import ControlButton from '../../ui/ControlButton.svelte';
   import Hero from '../../ui/Hero.svelte';
   import TransitionWrap from '../../ui/TransitionWrap.svelte';
+  import Modal from '../../ui/Modal.svelte';
 
   // Variables
-  let showModal = false;
+  let showModal: 'optional' | 'info' = undefined;
+  let slides: Slide[] = [];
   const components = {
-    webflowSetup: WebflowSetup,
-    elements: Elements,
-    alertElement: AlertElement,
+    alertSelector: AlertElement,
     alertText: AlertText,
     backText: BackText,
     backSelector: BackButton,
+    completedPercentageSelector: DisplayCompleted,
+    currentStepSelector: DisplayCurrentStep,
     customNav: CustomNav,
-    displayCompleted: DisplayCompleted,
-    displayCurrentStep: DisplayCurrentStep,
     displayValues: DisplayValues,
+    elements: Elements,
     hiddenForm: HiddenForm,
     msfGlobal: MsfGlobal,
     nextText: NextText,
     warningClass: WarningClass,
+    webflowSetup: WebflowSetup,
   };
 
   // Reactive
@@ -64,19 +72,20 @@
     $msfActivated = !$msfActivated;
   }
 
-  function openModal() {
-    showModal = true;
+  function openModal(mode: 'optional' | 'info', key?: string) {
+    if (key) slides = msfSlides[key];
+    showModal = mode;
   }
 
   function closeModal() {
-    showModal = false;
+    showModal = undefined;
   }
 
-  function addOptional(e) {
+  function addOptional(e: CustomEvent) {
     const key: string = e.detail;
     msfOptional.modify(key, true);
 
-    showModal = false;
+    showModal = undefined;
   }
 
   function deleteOptional(key: string) {
@@ -91,7 +100,8 @@
       title="Multi Steps"
       subtitle="Set up multi-step functionality for your forms."
       primaryText="Quick intro"
-      secondaryText="Watch tutorials" />
+      secondaryText="Watch tutorials"
+      on:primaryclick={() => openModal('info', 'intro')} />
 
     <!-- Msf Content -->
     <div class="container max-w-3xl">
@@ -113,7 +123,10 @@
           {#each $msfRequired as { key, title } (key)}
             <div class="msf-block" transition:fade|local={{ duration: 250 }}>
 
-              <MsfBlock {title} required={true}>
+              <MsfBlock
+                {title}
+                required={true}
+                on:info={() => openModal('info', key)}>
                 <svelte:component this={components[key]} />
               </MsfBlock>
 
@@ -124,7 +137,7 @@
         <!-- Optional Header -->
         <div class="hflex-c-s mb-6" transition:fade|local={{ duration: 250 }}>
           <h2 class="mb-0 mr-4">Optional setup</h2>
-          <ControlButton on:click={openModal} />
+          <ControlButton on:click={() => openModal('optional')} />
         </div>
 
         <!-- Optional Grid -->
@@ -135,7 +148,10 @@
               transition:fade|local={{ duration: 250 }}
               animate:flip={{ duration: 250 }}>
 
-              <MsfBlock {title} on:delete={() => deleteOptional(key)}>
+              <MsfBlock
+                {title}
+                on:info={() => openModal('info', key)}
+                on:delete={() => deleteOptional(key)}>
                 <svelte:component this={components[key]} {key} />
               </MsfBlock>
 
@@ -146,11 +162,13 @@
     </div>
   </section>
 
-  {#if showModal}
+  {#if showModal === 'optional'}
     <MsfModal
       blocks={unselectedOptionalBlocks}
       on:closemodal={closeModal}
       on:addoptional={addOptional} />
+  {:else if showModal === 'info'}
+    <Modal on:closemodal={closeModal} {slides} />
   {/if}
 
 </TransitionWrap>

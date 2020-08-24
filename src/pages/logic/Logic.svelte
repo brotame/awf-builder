@@ -6,6 +6,9 @@
   // Stores
   import logicStore from '../../stores/logic';
 
+  // Types
+  import type { Slide } from '../../types';
+
   // UI Components
   import Hero from '../../ui/Hero.svelte';
   import TransitionWrap from '../../ui/TransitionWrap.svelte';
@@ -16,12 +19,13 @@
   import LogicEditor from './components/LogicEditor.svelte';
 
   // Slides
-  import introSlides from './introSlides';
+  import logicSlides from './logic-slides';
 
   // Variables
   let editMode: boolean = false;
   let editID: string | null = null;
   let showModal: boolean = false;
+  let slides: Slide[] = [];
 
   // Functions
   function newLogic() {
@@ -38,7 +42,8 @@
     editID = null;
   }
 
-  function openModal() {
+  function openModal(key: string) {
+    slides = logicSlides[key];
     showModal = true;
   }
 
@@ -47,7 +52,7 @@
   }
 
   // Context
-  setContext('edit', editLogic);
+  setContext('logic', { editLogic, openModal });
 </script>
 
 <!-- Logic Editor -->
@@ -69,7 +74,7 @@
         want to add to the form."
         primaryText="Quick intro"
         secondaryText="Watch tutorials"
-        on:primaryclick={openModal} />
+        on:primaryclick={() => openModal('intro')} />
 
       <!-- Logic List -->
       <LogicList on:newLogic={newLogic} />
@@ -79,5 +84,5 @@
 
 <!-- Modal -->
 {#if showModal}
-  <Modal on:closemodal={closeModal} slides={introSlides} />
+  <Modal on:closemodal={closeModal} {slides} />
 {/if}

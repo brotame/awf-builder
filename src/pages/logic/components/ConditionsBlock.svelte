@@ -1,6 +1,6 @@
 <script lang="ts">
   //Svelte
-  import { createEventDispatcher, tick } from 'svelte';
+  import { createEventDispatcher } from 'svelte';
 
   // UI Components
   import ControlButton from '../../../ui/ControlButton.svelte';
@@ -8,7 +8,12 @@
   import Input from '../../../ui/Input.svelte';
 
   // Types
-  import type { Condition, SelectOption } from '../../../types';
+  import type {
+    ConditionType,
+    ConditionOperator,
+    Condition,
+    SelectOption,
+  } from '../../../types';
 
   // Exports
   export let condition: Condition, index: number;
@@ -26,6 +31,22 @@
   ];
 
   const operators: SelectOption[] = [
+    {
+      name: '-- Select Operator --',
+      value: '',
+      compatibleTypes: [
+        'text',
+        'email',
+        'password',
+        'phone',
+        'number',
+        'select',
+        'radios',
+        'number',
+        'checkbox',
+      ],
+      disabled: true,
+    },
     {
       name: 'Be Equal To',
       value: 'equal',
@@ -124,20 +145,35 @@
     },
   ];
 
-  // Reactive
-  $: if (
-    condition.operator === 'empty' ||
-    condition.operator === 'filled' ||
-    condition.type === 'checkbox'
-  )
-    delete condition.value;
+  let type: ConditionType = condition.type || 'text';
+  let selector = condition.selector || '';
+  let operator: ConditionOperator = condition.operator || '';
+  let value = condition.value || '';
 
+  // Reactive
+  $: condition.type = type;
+  $: condition.selector = selector;
+  $: condition.operator = operator;
+  $: condition.value = value;
+  // $: if (operator === 'checked') {
+  //   condition.operator = 'equal';
+  //   condition.value = 'true';
+  // }
+  // $: if (operator === 'not-checked') {
+  //   condition.operator = 'equal';
+  //   condition.value = 'false';
+  // }
+  $: if (['empty', 'filled'].includes(operator)) delete condition.value;
   $: filteredOperators = operators.filter((operator) =>
-    operator.compatibleTypes.includes(condition.type)
+    operator.compatibleTypes.includes(type)
   );
 
   // Functions
   const dispatch = createEventDispatcher();
+
+  function deleteOperator() {
+    operator = '';
+  }
 </script>
 
 <div class="logic-block">
@@ -149,9 +185,10 @@
       <Select
         id={`type-${index}`}
         name="Condition Origin Type"
-        bind:value={condition.type}
+        bind:value={type}
         extraClass="flex-auto"
         options={types}
+        on:input={deleteOperator}
         on:input />
     </div>
 
@@ -165,7 +202,7 @@
         name="Condition Selector"
         placeholder="your-element"
         id={`selector-${index}`}
-        bind:value={condition.selector}
+        bind:value={selector}
         extraClass="flex-auto"
         on:input />
 
@@ -179,7 +216,7 @@
         id={`operator-${index}`}
         name="Condition Operator"
         options={filteredOperators}
-        bind:value={condition.operator}
+        bind:value={operator}
         extraClass="flex-auto"
         on:input />
     </div>
@@ -194,7 +231,7 @@
           name="Condition Value"
           placeholder="Your Value"
           id={`value-${index}`}
-          bind:value={condition.value}
+          bind:value
           extraClass="flex-auto"
           on:input />
       </div>

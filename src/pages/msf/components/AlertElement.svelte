@@ -9,36 +9,19 @@
   import Select from '../../../ui/Select.svelte';
   import Input from '../../../ui/Input.svelte';
 
-  // Types
-  import type { SelectOption } from '../../../types';
-
   // Exports
   export let key: string;
 
   // Variables
-  const options: SelectOption[] = [
-    { name: 'Default', value: 'default' },
-    { name: 'Webflow Interaction', value: 'interaction' },
-  ];
-  let display: 'default' | 'interaction' = $msfStore.alertSelector
-    ? 'default'
-    : $msfStore.alertInteraction
-    ? 'interaction'
-    : 'default';
-  let selector = $msfStore.alertSelector || $msfStore.alertInteraction || '';
-  let input: HTMLInputElement;
+  let value = $msfStore[key] || '';
 
   // Reactive
-  $: if (display === 'default' && selector.length > 0)
-    $msfStore.alertSelector = selector;
-  else if (display === 'interaction' && selector.length > 0)
-    $msfStore.alertInteraction = selector;
+  $: if (value.length > 0) $msfStore[key] = value;
   else deleteParams();
 
   // Functions
   function deleteParams() {
-    delete $msfStore.alertSelector;
-    delete $msfStore.alertInteraction;
+    delete $msfStore[key];
   }
 
   onDestroy(() => {
@@ -46,19 +29,14 @@
   });
 </script>
 
-<Select
-  label="Display Method"
-  id="alert-display"
-  name="Alert Display"
-  extraClass="mb-8"
-  {options}
-  bind:value={display}
-  on:input={deleteParams} />
+<p class="mb-8">
+  Check the info to learn how to show / hide it using Webflow interactions.
+</p>
 
 <Input
-  label={display === 'default' ? 'Element ID' : 'Interaction Element ID'}
+  label="Element ID"
   id="alert-id"
   name="Alert ID"
   placeholder="Eg: alert-element"
-  bind:value={selector}
-  selector="id" />
+  selector="id"
+  bind:value />

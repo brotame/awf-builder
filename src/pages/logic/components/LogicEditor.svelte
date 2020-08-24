@@ -39,7 +39,7 @@
     { name: 'One Condition Is Met', value: 'or' },
   ];
 
-  let missingCondition: boolean, missingAction: boolean, triedToSubmit: boolean;
+  let missingFields: boolean, triedToSubmit: boolean;
   let logic: Logic = {
     id: uuidv4(),
     conditions: [cloneDeep(defaultCondition)],
@@ -56,24 +56,25 @@
   async function checkFilledInputs() {
     await tick();
 
-    console.log(logic);
-    logic.conditions.forEach((condition) => {
-      missingCondition =
+    for (const condition of logic.conditions) {
+      missingFields =
         !condition.type || !condition.selector || !condition.operator;
-      if (missingCondition) return;
-    });
+      if (missingFields) break;
+    }
 
-    logic.actions.forEach((action) => {
-      missingAction = !action.selector || !action.action;
-      if (missingAction) return;
-    });
+    if (missingFields) return;
+
+    for (const action of logic.actions) {
+      missingFields = !action.selector || !action.action;
+      if (missingFields) break;
+    }
   }
 
   async function formSubmit() {
     if (!triedToSubmit) triedToSubmit = true;
 
     await checkFilledInputs();
-    if (missingCondition || missingAction) return;
+    if (missingFields) return;
 
     if (editID) logicStore.modify(logic);
     else logicStore.add(logic);
@@ -175,9 +176,9 @@
       <button
         type="submit"
         class="button w-button"
-        class:error={(missingCondition || missingAction) && triedToSubmit}
+        class:error={missingFields && triedToSubmit}
         on:click|preventDefault={formSubmit}>
-        {(missingCondition || missingAction) && triedToSubmit ? 'Some Fields Are Missing' : 'Save Logic'}
+        {missingFields && triedToSubmit ? 'Some Fields Are Missing' : 'Save Logic'}
       </button>
     </div>
 

@@ -2,6 +2,9 @@
   // Constants
   import { starterForm } from '../../../constants';
 
+  // Stores
+  import { msfCopy } from '../../../stores/msf';
+
   // Types
   type Notification = 'success' | 'error';
 
@@ -22,11 +25,17 @@
 
   function handleCopy(e: ClipboardEvent) {
     try {
+      // Copy starter form JSON to clipboard
       e.clipboardData.setData(
         'application/json',
         JSON.stringify(starterForm).trim()
       );
       e.preventDefault();
+
+      // Set default selectors in the store (check Elements.svelte)
+      $msfCopy = true;
+
+      // Trigger notification
       triggerNotification('success');
     } catch {
       triggerNotification('error');

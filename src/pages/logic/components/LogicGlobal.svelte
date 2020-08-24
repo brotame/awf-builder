@@ -1,10 +1,16 @@
 <script lang="ts">
+  // Svelte
+  import { getContext } from 'svelte';
+
   // Store
   import { logicParams } from '../../../stores/logic';
 
   // UI Components
   import Checkbox from '../../../ui/Checkbox.svelte';
   import MiniButton from '../../../ui/MiniButton.svelte';
+
+  // Functions
+  const { openModal } = getContext('logic');
 </script>
 
 <div>
@@ -18,7 +24,7 @@
       bind:checked={$logicParams.submitHiddenInputs}
       label="Submit hidden inputs"
       extraClass="mr-3" />
-    <MiniButton action="info" />
+    <MiniButton action="info" on:info={() => openModal('submitHiddenInputs')} />
   </div>
 
   <!-- Check Conditions On Load -->
@@ -29,6 +35,8 @@
       bind:checked={$logicParams.checkConditionsOnLoad}
       label="Check conditions on load"
       extraClass="mr-3" />
-    <MiniButton action="info" />
+    <MiniButton
+      action="info"
+      on:info={() => openModal('checkConditionsOnLoad')} />
   </div>
 </div>

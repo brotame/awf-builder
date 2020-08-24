@@ -3,7 +3,7 @@
   import { v4 as uuidv4 } from 'uuid';
 
   // Svelte
-  import { onDestroy } from 'svelte';
+  import { onMount, onDestroy } from 'svelte';
   import { slide } from 'svelte/transition';
 
   // UI Components
@@ -63,6 +63,12 @@
   // Remove from store if unselected
   onDestroy(() => {
     if (!msfOptional.checkSelected(key)) deleteParams();
+  });
+
+  onMount(() => {
+    // If back button is not active, activate it
+    if (!msfOptional.checkSelected('backSelector'))
+      msfOptional.modify('backSelector', true);
   });
 </script>
 

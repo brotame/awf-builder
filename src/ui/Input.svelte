@@ -17,6 +17,10 @@
 
   // Variables
   let input: HTMLInputElement;
+  let inputValue = '';
+
+  // Reactive
+  $: if (value) inputValue = removeSelector(value.toString());
 
   // Functions
   // Add id or class selector if needed
@@ -42,11 +46,6 @@
   function handleInput() {
     value = input.value.length > 0 ? addSelector(input.value) : '';
   }
-
-  // Remove the selector on Mount
-  onMount(() => {
-    input.value = removeSelector(value.toString());
-  });
 </script>
 
 <div class="relative {extraClass}">
@@ -62,6 +61,7 @@
     {id}
     {min}
     {max}
+    value={inputValue}
     class="input-field w-input"
     maxlength="256"
     bind:this={input}

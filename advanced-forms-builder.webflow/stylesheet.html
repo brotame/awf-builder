@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Sat Aug 22 2020 09:37:01 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Mon Aug 24 2020 13:31:08 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="5ee9e5f2c67c98ef55331578" data-wf-site="5ee9e5f2c67c989ce5331572">
 <head>
   <meta charset="utf-8">
@@ -54,14 +54,11 @@
       </div>
       <div class="modal-content">
         <div class="vflex-str-s">
-          <h3 class="mb-2">Step 1</h3>
+          <h3 class="mb-2">intro</h3>
           <div class="logic-block-divider mb-4"></div>
           <p>Build your form in the Webflow Designer as you would normally do.<br></p>
-          <p>Make sure each target <span class="opacity-75">(element that will be affected by an action)</span> is wrapped in a <em>Div Block</em> that has the custom attribute:<br></p>
-          <ul role="list" class="list-none">
-            <li><strong>Name:</strong> data-logic</li>
-            <li><strong>Value:</strong> parent</li>
-          </ul>
+          <p>Then, create your logic in the builder. You can set as many conditions and actions to be performed, the code will be automatically generated for you!<br></p>
+          <p>Check the next steps to see what you can do with it!<br></p>
           <div class="hflex-c-sb mt-auto">
             <div class="modal-nav opacity-0">
               <div class="icon mr-2 w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -90,11 +87,44 @@
       </div>
       <div class="modal-content">
         <div class="vflex-str-s">
-          <h3 class="mb-2">Tip!</h3>
+          <h3 class="mb-2">Single action target</h3>
           <div class="logic-block-divider mb-4"></div>
-          <p>You can also group multiple elements in the same parent wrapper.<br></p>
-          <p>If you set that group as the target of an action, all the inputs inside it will be affected.<br></p>
-          <p class="text-sm pl-4 mb-8"><strong>E.g.</strong> disable all inputs that are inside the <em>Div Block</em> which ID is <span class="opacity-75">contact-info</span>.<br></p>
+          <p>You can set the target of an action to be any form element (input, select, checkbox, radio...).<br></p>
+          <p>To do so, use its ID:<br></p>
+          <p class="text-sm pl-4 mb-6"><strong>E.g.</strong> minput which ID is<span class="opacity-75">surname</span> to be required.<br></p>
+          <p>You can show, hide, enable, disable, require or unrequire it.<br></p>
+          <div class="hflex-c-sb mt-auto">
+            <div class="modal-nav">
+              <div class="icon mr-2 w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M136.97 252.485L144.041 245.415C148.727 240.729 148.727 233.131 144.041 228.444L60.113 145H436C442.627 145 448 139.627 448 133V123C448 116.373 442.627 111 436 111H60.113L144.041 27.556C148.727 22.87 148.727 15.272 144.041 10.585L136.97 3.515C132.284 -1.171 124.686 -1.171 120 3.515L3.51499 119.515C-1.17101 124.201 -1.17101 131.799 3.51499 136.486L120 252.486C124.686 257.172 132.284 257.172 136.97 252.485Z"></path>
+</svg></div>
+              <div class="uppercase">Back</div>
+            </div>
+            <div class="modal-nav">
+              <div class="uppercase mr-2">NEXT</div>
+              <div class="icon w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M311.03 3.51501L303.959 10.585C299.273 15.271 299.273 22.869 303.959 27.556L387.887 111H12C5.373 111 0 116.373 0 123V133C0 139.627 5.373 145 12 145H387.887L303.959 228.444C299.273 233.13 299.273 240.728 303.959 245.415L311.03 252.485C315.716 257.171 323.314 257.171 328 252.485L444.485 136.485C449.171 131.799 449.171 124.201 444.485 119.514L328 3.51501C323.314 -1.17199 315.716 -1.17199 311.03 3.51501Z"></path>
+</svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="vflex-str-c"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="rounded-4"></div>
+      </div>
+    </div>
+    <div class="modal-content-wrap">
+      <div scroll="enable" class="modal-close">
+        <div class="_w-full vflex-str-c w-embed"><svg viewbox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M353.047 256L498.604 110.444C516.465 92.5818 516.465 63.6218 498.604 45.7455L466.255 13.3964C448.393 -4.46545 419.433 -4.46545 401.556 13.3964L256 158.953L110.444 13.3964C92.5818 -4.46545 63.6218 -4.46545 45.7455 13.3964L13.3964 45.7455C-4.46545 63.6073 -4.46545 92.5673 13.3964 110.444L158.953 256L13.3964 401.556C-4.46545 419.418 -4.46545 448.378 13.3964 466.255L45.7455 498.604C63.6073 516.465 92.5818 516.465 110.444 498.604L256 353.047L401.556 498.604C419.418 516.465 448.393 516.465 466.255 498.604L498.604 466.255C516.465 448.393 516.465 419.433 498.604 401.556L353.047 256Z"></path>
+</svg></div>
+      </div>
+      <div class="modal-content">
+        <div class="vflex-str-s">
+          <h3 class="mb-2">Group action target</h3>
+          <div class="logic-block-divider mb-4"></div>
+          <p>You can also group multiple elements inside a <em>Div Block</em>.<br></p>
+          <p>If you set that <em>Div Block</em> as the target of an action, all the inputs inside it will be affected.<br></p>
+          <p>To do so, use that block ID:<br></p>
+          <p class="text-sm pl-4"><strong>E.g.</strong> disable all inputs that are inside the <em>Div Block</em> which ID is <span class="opacity-75">contact-info</span>.<br></p>
           <div class="hflex-c-sb mt-auto">
             <div class="modal-nav">
               <div class="icon mr-2 w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -122,15 +152,21 @@
 </svg></div>
       </div>
       <div class="modal-content">
-        <div class="vflex-str-s">
-          <h3 class="mb-2">Step 2</h3>
-          <div class="logic-block-divider mb-4"></div>
-          <p>Set your conditions and actions in the builder.<br></p>
-          <p class="mb-1">If the target of an action is a single input, use its ID.<br></p>
-          <p class="text-sm pl-4"><strong>E.g.</strong> <span class="opacity-75">Surname</span><br></p>
-          <p class="mb-1">If the target is a group of inputs, use the ID of the parent that wraps all of them.<strong>‍</strong><br></p>
-          <p class="text-sm pl-4"><strong>E.g.</strong> <span class="opacity-75">contact-info</span><br></p>
-          <p class="text-sm mb-8"><strong>Note:</strong> Remember that each parent <em>Div Block</em> must have the custom attribute <span class="opacity-75">data-logic = parent</span>.</p>
+        <div>
+          <h3 class="mb-2">Action Interactions</h3>
+          <div class="logic-block-divider mb-6"></div>
+          <div class="modal-text">
+            <p>You can trigger Webflow Interactions when any action is performed.<br></p>
+            <p>To do so, you must first set your target as a Group Action Target:<br></p>
+            <p class="text-sm pl-4 mb-6"><em>&quot;Put your target inside a Div Block and use its ID as the target.&quot;</em></p>
+            <p>Then add inside the group a hidden <em>Div Block</em> with the custom attribute:<br></p>
+            <ul role="list" class="list-none">
+              <li><strong>Name:</strong> data-logic</li>
+              <li><strong>Value:</strong> show, hide, enable, disable, require or unrequire.</li>
+            </ul>
+            <p>And bind it to a <span class="opacity-75">Mouse click (tap)</span> interaction.<br>When an action is performed, the script will click the correspondent trigger.<br></p>
+            <p class="text-sm pl-4"><strong>E.g.</strong> when you show the input <span class="opacity-75">phone</span>, the script will click the <em>Div Block</em> that has the attribute <span class="opacity-75">data-logic=show</span>.</p>
+          </div>
           <div class="hflex-c-sb mt-auto">
             <div class="modal-nav">
               <div class="icon mr-2 w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -146,45 +182,7 @@
             </div>
           </div>
         </div>
-        <div class="vflex-str-c"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="rounded-4"></div>
-      </div>
-    </div>
-  </div>
-  <div class="section vflex-c-c">
-    <div class="modal-content-wrap">
-      <div scroll="enable" class="modal-close">
-        <div class="_w-full vflex-str-c w-embed"><svg viewbox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-<path d="M353.047 256L498.604 110.444C516.465 92.5818 516.465 63.6218 498.604 45.7455L466.255 13.3964C448.393 -4.46545 419.433 -4.46545 401.556 13.3964L256 158.953L110.444 13.3964C92.5818 -4.46545 63.6218 -4.46545 45.7455 13.3964L13.3964 45.7455C-4.46545 63.6073 -4.46545 92.5673 13.3964 110.444L158.953 256L13.3964 401.556C-4.46545 419.418 -4.46545 448.378 13.3964 466.255L45.7455 498.604C63.6073 516.465 92.5818 516.465 110.444 498.604L256 353.047L401.556 498.604C419.418 516.465 448.393 516.465 466.255 498.604L498.604 466.255C516.465 448.393 516.465 419.433 498.604 401.556L353.047 256Z"></path>
-</svg></div>
-      </div>
-      <div class="modal-content">
-        <div class="vflex-str-s">
-          <h3 class="mb-2">Step 3 (Optional)</h3>
-          <div class="logic-block-divider mb-4"></div>
-          <p>You can trigger Webflow Interactions when any action is performed.<br></p>
-          <p>To do so, add a hidden <em>Div Block</em> inside the target&#x27;s parent wrapper and bind it to a <span class="opacity-75">Mouse click (tap)</span> interaction. Then, add the following custom attribute:<br></p>
-          <ul role="list" class="list-none">
-            <li><strong>Name:</strong> data-logic</li>
-            <li><strong>Value:</strong> show, hide, enable, disable, require, unrequire or custom.</li>
-          </ul>
-          <p>The script will automatically click the correspondent <em>Div Block</em>.<br></p>
-          <p class="text-sm pl-4 mb-8"><strong>E.g.</strong> when you show the input <span class="opacity-75">phone</span>, the script will click the <em>Div Block</em> that has the attribute <span class="opacity-75">data-logic=show</span>.</p>
-          <div class="hflex-c-sb mt-auto">
-            <div class="modal-nav">
-              <div class="icon mr-2 w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-<path d="M136.97 252.485L144.041 245.415C148.727 240.729 148.727 233.131 144.041 228.444L60.113 145H436C442.627 145 448 139.627 448 133V123C448 116.373 442.627 111 436 111H60.113L144.041 27.556C148.727 22.87 148.727 15.272 144.041 10.585L136.97 3.515C132.284 -1.171 124.686 -1.171 120 3.515L3.51499 119.515C-1.17101 124.201 -1.17101 131.799 3.51499 136.486L120 252.486C124.686 257.172 132.284 257.172 136.97 252.485Z"></path>
-</svg></div>
-              <div class="uppercase">Back</div>
-            </div>
-            <div class="modal-nav">
-              <div class="uppercase mr-2">NEXT</div>
-              <div class="icon w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-<path d="M311.03 3.51501L303.959 10.585C299.273 15.271 299.273 22.869 303.959 27.556L387.887 111H12C5.373 111 0 116.373 0 123V133C0 139.627 5.373 145 12 145H387.887L303.959 228.444C299.273 233.13 299.273 240.728 303.959 245.415L311.03 252.485C315.716 257.171 323.314 257.171 328 252.485L444.485 136.485C449.171 131.799 449.171 124.201 444.485 119.514L328 3.51501C323.314 -1.17199 315.716 -1.17199 311.03 3.51501Z"></path>
-</svg></div>
-            </div>
-          </div>
-        </div>
-        <div class="vflex-str-c"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="rounded-4"></div>
+        <div id="w-node-e5906dab06c2-55331578" class="vflex-str-c"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="rounded-4"></div>
       </div>
     </div>
   </div>
@@ -199,8 +197,8 @@
         <div class="vflex-str-s">
           <h3 class="mb-2">Important!</h3>
           <div class="logic-block-divider mb-4"></div>
-          <p>When you choose to <em>show </em>or <em>hide </em>a target, by default the script will set the parent wrapper to <span class="opacity-75">display: block</span> or <span class="opacity-75">display: none</span>.<br></p>
-          <p>If you bind a Webflow Interaction to the <em>hide </em>or <em>show </em>actions, the script expects you to set that display property.<br></p>
+          <p>When you choose to <em>show </em>or <em>hide </em>a target, by default the script will set it to <span class="opacity-75">display: block</span> or <span class="opacity-75">display: none</span>.<br></p>
+          <p>If you bind a Webflow Interaction to the <em>hide </em>or <em>show </em>actions, you should set that display property.<br></p>
           <p class="text-sm pl-4 mb-8"><strong>E.g.</strong> when the target is showed, trigger a Webflow Interaction that sets <span class="opacity-75">display: flex</span> and <span class="opacity-75">opacity: 100%</span>.<br></p>
           <div class="hflex-c-sb mt-auto">
             <div class="modal-nav">
@@ -211,6 +209,659 @@
             </div>
             <div class="modal-nav">
               <div class="uppercase mr-2">finish</div>
+            </div>
+          </div>
+        </div>
+        <div class="vflex-str-c"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="rounded-4"></div>
+      </div>
+    </div>
+  </div>
+  <div class="section vflex-c-c">
+    <div class="modal-content-wrap">
+      <div scroll="enable" class="modal-close">
+        <div class="_w-full vflex-str-c w-embed"><svg viewbox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M353.047 256L498.604 110.444C516.465 92.5818 516.465 63.6218 498.604 45.7455L466.255 13.3964C448.393 -4.46545 419.433 -4.46545 401.556 13.3964L256 158.953L110.444 13.3964C92.5818 -4.46545 63.6218 -4.46545 45.7455 13.3964L13.3964 45.7455C-4.46545 63.6073 -4.46545 92.5673 13.3964 110.444L158.953 256L13.3964 401.556C-4.46545 419.418 -4.46545 448.378 13.3964 466.255L45.7455 498.604C63.6073 516.465 92.5818 516.465 110.444 498.604L256 353.047L401.556 498.604C419.418 516.465 448.393 516.465 466.255 498.604L498.604 466.255C516.465 448.393 516.465 419.433 498.604 401.556L353.047 256Z"></path>
+</svg></div>
+      </div>
+      <div class="modal-content">
+        <div>
+          <h3 class="mb-2">Custom interactions</h3>
+          <div class="logic-block-divider mb-6"></div>
+          <div class="modal-text">
+            <p>You can also trigger a random interaction that isn&#x27;t binded to any specific action.<br></p>
+            <p>To do so, select <strong>Interaction<em> </em></strong>as the trigger.<br></p>
+            <p>The script will click that trigger when the conditions are met.<br></p>
+            <p class="text-sm pl-4"><strong>E.g.</strong> click the element with the ID <span class="opacity-75">show-modal</span> when the conditions are met.</p>
+          </div>
+          <div class="hflex-c-sb mt-auto">
+            <div class="modal-nav">
+              <div class="icon mr-2 w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M136.97 252.485L144.041 245.415C148.727 240.729 148.727 233.131 144.041 228.444L60.113 145H436C442.627 145 448 139.627 448 133V123C448 116.373 442.627 111 436 111H60.113L144.041 27.556C148.727 22.87 148.727 15.272 144.041 10.585L136.97 3.515C132.284 -1.171 124.686 -1.171 120 3.515L3.51499 119.515C-1.17101 124.201 -1.17101 131.799 3.51499 136.486L120 252.486C124.686 257.172 132.284 257.172 136.97 252.485Z"></path>
+</svg></div>
+              <div class="uppercase">Back</div>
+            </div>
+            <div class="modal-nav">
+              <div class="uppercase mr-2">NEXT</div>
+              <div class="icon w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M311.03 3.51501L303.959 10.585C299.273 15.271 299.273 22.869 303.959 27.556L387.887 111H12C5.373 111 0 116.373 0 123V133C0 139.627 5.373 145 12 145H387.887L303.959 228.444C299.273 233.13 299.273 240.728 303.959 245.415L311.03 252.485C315.716 257.171 323.314 257.171 328 252.485L444.485 136.485C449.171 131.799 449.171 124.201 444.485 119.514L328 3.51501C323.314 -1.17199 315.716 -1.17199 311.03 3.51501Z"></path>
+</svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="vflex-str-c"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="rounded-4"></div>
+      </div>
+    </div>
+  </div>
+  <div class="section vflex-c-c">
+    <div class="modal-content-wrap">
+      <div scroll="enable" class="modal-close">
+        <div class="_w-full vflex-str-c w-embed"><svg viewbox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M353.047 256L498.604 110.444C516.465 92.5818 516.465 63.6218 498.604 45.7455L466.255 13.3964C448.393 -4.46545 419.433 -4.46545 401.556 13.3964L256 158.953L110.444 13.3964C92.5818 -4.46545 63.6218 -4.46545 45.7455 13.3964L13.3964 45.7455C-4.46545 63.6073 -4.46545 92.5673 13.3964 110.444L158.953 256L13.3964 401.556C-4.46545 419.418 -4.46545 448.378 13.3964 466.255L45.7455 498.604C63.6073 516.465 92.5818 516.465 110.444 498.604L256 353.047L401.556 498.604C419.418 516.465 448.393 516.465 466.255 498.604L498.604 466.255C516.465 448.393 516.465 419.433 498.604 401.556L353.047 256Z"></path>
+</svg></div>
+      </div>
+      <div class="modal-content">
+        <div>
+          <h3 class="mb-2">Submit hidden inputs</h3>
+          <div class="logic-block-divider mb-6"></div>
+          <div class="modal-text">
+            <p>You can choose if the inputs that are affected by the action <strong>hide</strong> should be submitted or not.<br></p>
+            <p class="text-sm pl-4"><strong>Warning:</strong> not submitting the hidden inputs can affect 3rd party integrations like Zapier, as the form could receive different fields depending on user actions.</p>
+          </div>
+          <div class="hflex-c-sb mt-auto">
+            <div class="modal-nav">
+              <div class="icon mr-2 w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M136.97 252.485L144.041 245.415C148.727 240.729 148.727 233.131 144.041 228.444L60.113 145H436C442.627 145 448 139.627 448 133V123C448 116.373 442.627 111 436 111H60.113L144.041 27.556C148.727 22.87 148.727 15.272 144.041 10.585L136.97 3.515C132.284 -1.171 124.686 -1.171 120 3.515L3.51499 119.515C-1.17101 124.201 -1.17101 131.799 3.51499 136.486L120 252.486C124.686 257.172 132.284 257.172 136.97 252.485Z"></path>
+</svg></div>
+              <div class="uppercase">Back</div>
+            </div>
+            <div class="modal-nav">
+              <div class="uppercase mr-2">NEXT</div>
+              <div class="icon w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M311.03 3.51501L303.959 10.585C299.273 15.271 299.273 22.869 303.959 27.556L387.887 111H12C5.373 111 0 116.373 0 123V133C0 139.627 5.373 145 12 145H387.887L303.959 228.444C299.273 233.13 299.273 240.728 303.959 245.415L311.03 252.485C315.716 257.171 323.314 257.171 328 252.485L444.485 136.485C449.171 131.799 449.171 124.201 444.485 119.514L328 3.51501C323.314 -1.17199 315.716 -1.17199 311.03 3.51501Z"></path>
+</svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="vflex-str-c"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="rounded-4"></div>
+      </div>
+    </div>
+  </div>
+  <div class="section vflex-c-c">
+    <div class="modal-content-wrap">
+      <div scroll="enable" class="modal-close">
+        <div class="_w-full vflex-str-c w-embed"><svg viewbox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M353.047 256L498.604 110.444C516.465 92.5818 516.465 63.6218 498.604 45.7455L466.255 13.3964C448.393 -4.46545 419.433 -4.46545 401.556 13.3964L256 158.953L110.444 13.3964C92.5818 -4.46545 63.6218 -4.46545 45.7455 13.3964L13.3964 45.7455C-4.46545 63.6073 -4.46545 92.5673 13.3964 110.444L158.953 256L13.3964 401.556C-4.46545 419.418 -4.46545 448.378 13.3964 466.255L45.7455 498.604C63.6073 516.465 92.5818 516.465 110.444 498.604L256 353.047L401.556 498.604C419.418 516.465 448.393 516.465 466.255 498.604L498.604 466.255C516.465 448.393 516.465 419.433 498.604 401.556L353.047 256Z"></path>
+</svg></div>
+      </div>
+      <div class="modal-content">
+        <div>
+          <h3 class="mb-2">Check conditions on load</h3>
+          <div class="logic-block-divider mb-6"></div>
+          <div class="modal-text">
+            <p>If you select this option, the script will check if any of the conditions is already met when the page loads and triggers the correspondent actions.<br></p>
+            <p class="text-sm pl-4"><strong>Note:</strong> it is recommended to leave this option checked, as not doing so could lead to unexpected behaviours.</p>
+          </div>
+          <div class="hflex-c-sb mt-auto">
+            <div class="modal-nav">
+              <div class="icon mr-2 w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M136.97 252.485L144.041 245.415C148.727 240.729 148.727 233.131 144.041 228.444L60.113 145H436C442.627 145 448 139.627 448 133V123C448 116.373 442.627 111 436 111H60.113L144.041 27.556C148.727 22.87 148.727 15.272 144.041 10.585L136.97 3.515C132.284 -1.171 124.686 -1.171 120 3.515L3.51499 119.515C-1.17101 124.201 -1.17101 131.799 3.51499 136.486L120 252.486C124.686 257.172 132.284 257.172 136.97 252.485Z"></path>
+</svg></div>
+              <div class="uppercase">Back</div>
+            </div>
+            <div class="modal-nav">
+              <div class="uppercase mr-2">NEXT</div>
+              <div class="icon w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M311.03 3.51501L303.959 10.585C299.273 15.271 299.273 22.869 303.959 27.556L387.887 111H12C5.373 111 0 116.373 0 123V133C0 139.627 5.373 145 12 145H387.887L303.959 228.444C299.273 233.13 299.273 240.728 303.959 245.415L311.03 252.485C315.716 257.171 323.314 257.171 328 252.485L444.485 136.485C449.171 131.799 449.171 124.201 444.485 119.514L328 3.51501C323.314 -1.17199 315.716 -1.17199 311.03 3.51501Z"></path>
+</svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="vflex-str-c"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="rounded-4"></div>
+      </div>
+    </div>
+  </div>
+  <div class="section vflex-c-c">
+    <div class="modal-content-wrap">
+      <div scroll="enable" class="modal-close">
+        <div class="_w-full vflex-str-c w-embed"><svg viewbox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M353.047 256L498.604 110.444C516.465 92.5818 516.465 63.6218 498.604 45.7455L466.255 13.3964C448.393 -4.46545 419.433 -4.46545 401.556 13.3964L256 158.953L110.444 13.3964C92.5818 -4.46545 63.6218 -4.46545 45.7455 13.3964L13.3964 45.7455C-4.46545 63.6073 -4.46545 92.5673 13.3964 110.444L158.953 256L13.3964 401.556C-4.46545 419.418 -4.46545 448.378 13.3964 466.255L45.7455 498.604C63.6073 516.465 92.5818 516.465 110.444 498.604L256 353.047L401.556 498.604C419.418 516.465 448.393 516.465 466.255 498.604L498.604 466.255C516.465 448.393 516.465 419.433 498.604 401.556L353.047 256Z"></path>
+</svg></div>
+      </div>
+      <div class="modal-content">
+        <div>
+          <h3 class="mb-2">Multi step form</h3>
+          <div class="logic-block-divider mb-6"></div>
+          <div class="modal-text">
+            <p>The slides will act as different steps of your form. You can put how many slides as you want inside the slider.<br></p>
+            <p>Each step will check the required inputs inside it before jumping to the next one.<br></p>
+            <p>You can put how many slides (steps) as you want inside the slider. Each step will check the <strong class="underline">required and visible</strong> inputs inside it before jumping to the next one.<br></p>
+          </div>
+          <div class="hflex-c-sb mt-auto">
+            <div class="modal-nav">
+              <div class="icon mr-2 w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M136.97 252.485L144.041 245.415C148.727 240.729 148.727 233.131 144.041 228.444L60.113 145H436C442.627 145 448 139.627 448 133V123C448 116.373 442.627 111 436 111H60.113L144.041 27.556C148.727 22.87 148.727 15.272 144.041 10.585L136.97 3.515C132.284 -1.171 124.686 -1.171 120 3.515L3.51499 119.515C-1.17101 124.201 -1.17101 131.799 3.51499 136.486L120 252.486C124.686 257.172 132.284 257.172 136.97 252.485Z"></path>
+</svg></div>
+              <div class="uppercase">Back</div>
+            </div>
+            <div class="modal-nav">
+              <div class="uppercase mr-2">NEXT</div>
+              <div class="icon w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M311.03 3.51501L303.959 10.585C299.273 15.271 299.273 22.869 303.959 27.556L387.887 111H12C5.373 111 0 116.373 0 123V133C0 139.627 5.373 145 12 145H387.887L303.959 228.444C299.273 233.13 299.273 240.728 303.959 245.415L311.03 252.485C315.716 257.171 323.314 257.171 328 252.485L444.485 136.485C449.171 131.799 449.171 124.201 444.485 119.514L328 3.51501C323.314 -1.17199 315.716 -1.17199 311.03 3.51501Z"></path>
+</svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="vflex-str-c"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="rounded-4"></div>
+      </div>
+    </div>
+  </div>
+  <div class="section vflex-c-c">
+    <div class="modal-content-wrap">
+      <div scroll="enable" class="modal-close">
+        <div class="_w-full vflex-str-c w-embed"><svg viewbox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M353.047 256L498.604 110.444C516.465 92.5818 516.465 63.6218 498.604 45.7455L466.255 13.3964C448.393 -4.46545 419.433 -4.46545 401.556 13.3964L256 158.953L110.444 13.3964C92.5818 -4.46545 63.6218 -4.46545 45.7455 13.3964L13.3964 45.7455C-4.46545 63.6073 -4.46545 92.5673 13.3964 110.444L158.953 256L13.3964 401.556C-4.46545 419.418 -4.46545 448.378 13.3964 466.255L45.7455 498.604C63.6073 516.465 92.5818 516.465 110.444 498.604L256 353.047L401.556 498.604C419.418 516.465 448.393 516.465 466.255 498.604L498.604 466.255C516.465 448.393 516.465 419.433 498.604 401.556L353.047 256Z"></path>
+</svg></div>
+      </div>
+      <div class="modal-content">
+        <div>
+          <h3 class="mb-2">Multi step Functionality</h3>
+          <div class="logic-block-divider mb-6"></div>
+          <div class="modal-text">
+            <p>Add multi step functionality to your Webflow Forms in a couple of clicks:<br></p>
+            <ul role="list">
+              <li>Input validation</li>
+              <li>Warnings</li>
+              <li>Custom Interactions</li>
+              <li>And much more!</li>
+            </ul>
+            <p>Simply select all the features that you want to add and the builder will generate the code for you :)<br></p>
+            <p>Some functionalities may require a certain setup in Webflow, always check the info before setting them!<br></p>
+          </div>
+          <div class="hflex-c-sb mt-auto">
+            <div class="modal-nav">
+              <div class="icon mr-2 w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M136.97 252.485L144.041 245.415C148.727 240.729 148.727 233.131 144.041 228.444L60.113 145H436C442.627 145 448 139.627 448 133V123C448 116.373 442.627 111 436 111H60.113L144.041 27.556C148.727 22.87 148.727 15.272 144.041 10.585L136.97 3.515C132.284 -1.171 124.686 -1.171 120 3.515L3.51499 119.515C-1.17101 124.201 -1.17101 131.799 3.51499 136.486L120 252.486C124.686 257.172 132.284 257.172 136.97 252.485Z"></path>
+</svg></div>
+              <div class="uppercase">Back</div>
+            </div>
+            <div class="modal-nav">
+              <div class="uppercase mr-2">NEXT</div>
+              <div class="icon w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M311.03 3.51501L303.959 10.585C299.273 15.271 299.273 22.869 303.959 27.556L387.887 111H12C5.373 111 0 116.373 0 123V133C0 139.627 5.373 145 12 145H387.887L303.959 228.444C299.273 233.13 299.273 240.728 303.959 245.415L311.03 252.485C315.716 257.171 323.314 257.171 328 252.485L444.485 136.485C449.171 131.799 449.171 124.201 444.485 119.514L328 3.51501C323.314 -1.17199 315.716 -1.17199 311.03 3.51501Z"></path>
+</svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="vflex-str-c"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="rounded-4"></div>
+      </div>
+    </div>
+  </div>
+  <div class="section vflex-c-c">
+    <div class="modal-content-wrap">
+      <div scroll="enable" class="modal-close">
+        <div class="_w-full vflex-str-c w-embed"><svg viewbox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M353.047 256L498.604 110.444C516.465 92.5818 516.465 63.6218 498.604 45.7455L466.255 13.3964C448.393 -4.46545 419.433 -4.46545 401.556 13.3964L256 158.953L110.444 13.3964C92.5818 -4.46545 63.6218 -4.46545 45.7455 13.3964L13.3964 45.7455C-4.46545 63.6073 -4.46545 92.5673 13.3964 110.444L158.953 256L13.3964 401.556C-4.46545 419.418 -4.46545 448.378 13.3964 466.255L45.7455 498.604C63.6073 516.465 92.5818 516.465 110.444 498.604L256 353.047L401.556 498.604C419.418 516.465 448.393 516.465 466.255 498.604L498.604 466.255C516.465 448.393 516.465 419.433 498.604 401.556L353.047 256Z"></path>
+</svg></div>
+      </div>
+      <div class="modal-content">
+        <div>
+          <h3 class="mb-2">Required elements</h3>
+          <div class="logic-block-divider mb-6"></div>
+          <div class="modal-text">
+            <p>Make sure that you set the ID of the Form, <strong>not</strong> the Form Block.<br></p>
+            <p>The next button doesn&#x27;t need to be placed inside the form, it can be located anywhere in the page.<br></p>
+            <p>Once the last step is reached, the next button&#x27;s text will change to the submit button&#x27;s text.<br></p>
+            <p class="text-sm pl-4"><strong>Note:</strong> remember to place a submit button set to <span class="opacity-75">display:none</span> anywhere inside the form.</p>
+          </div>
+          <div class="hflex-c-sb mt-auto">
+            <div class="modal-nav">
+              <div class="icon mr-2 w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M136.97 252.485L144.041 245.415C148.727 240.729 148.727 233.131 144.041 228.444L60.113 145H436C442.627 145 448 139.627 448 133V123C448 116.373 442.627 111 436 111H60.113L144.041 27.556C148.727 22.87 148.727 15.272 144.041 10.585L136.97 3.515C132.284 -1.171 124.686 -1.171 120 3.515L3.51499 119.515C-1.17101 124.201 -1.17101 131.799 3.51499 136.486L120 252.486C124.686 257.172 132.284 257.172 136.97 252.485Z"></path>
+</svg></div>
+              <div class="uppercase">Back</div>
+            </div>
+            <div class="modal-nav">
+              <div class="uppercase mr-2">NEXT</div>
+              <div class="icon w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M311.03 3.51501L303.959 10.585C299.273 15.271 299.273 22.869 303.959 27.556L387.887 111H12C5.373 111 0 116.373 0 123V133C0 139.627 5.373 145 12 145H387.887L303.959 228.444C299.273 233.13 299.273 240.728 303.959 245.415L311.03 252.485C315.716 257.171 323.314 257.171 328 252.485L444.485 136.485C449.171 131.799 449.171 124.201 444.485 119.514L328 3.51501C323.314 -1.17199 315.716 -1.17199 311.03 3.51501Z"></path>
+</svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="vflex-str-c"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="rounded-4"></div>
+      </div>
+    </div>
+  </div>
+  <div class="section vflex-c-c">
+    <div class="modal-content-wrap">
+      <div scroll="enable" class="modal-close">
+        <div class="_w-full vflex-str-c w-embed"><svg viewbox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M353.047 256L498.604 110.444C516.465 92.5818 516.465 63.6218 498.604 45.7455L466.255 13.3964C448.393 -4.46545 419.433 -4.46545 401.556 13.3964L256 158.953L110.444 13.3964C92.5818 -4.46545 63.6218 -4.46545 45.7455 13.3964L13.3964 45.7455C-4.46545 63.6073 -4.46545 92.5673 13.3964 110.444L158.953 256L13.3964 401.556C-4.46545 419.418 -4.46545 448.378 13.3964 466.255L45.7455 498.604C63.6073 516.465 92.5818 516.465 110.444 498.604L256 353.047L401.556 498.604C419.418 516.465 448.393 516.465 466.255 498.604L498.604 466.255C516.465 448.393 516.465 419.433 498.604 401.556L353.047 256Z"></path>
+</svg></div>
+      </div>
+      <div class="modal-content">
+        <div>
+          <h3 class="mb-2">Alert element</h3>
+          <div class="logic-block-divider mb-6"></div>
+          <div class="modal-text">
+            <p>You can show an element as an alert when there are missing fields that must be filled.<br></p>
+            <p class="text-sm pl-4"><strong>Eg:</strong> show a box that alerts the user to fill the missing inputs.</p>
+            <p>This element can be placed anywhere in the page.<br></p>
+            <p>By default, it will be set to <span class="opacity-75">display:block</span> when shown, and <span class="opacity-75">display:none</span> when hidden.<br></p>
+            <p>If you want to show it using a Webflow Interaction, place a hidden <em>Div Block</em> inside it with the custom attribute:<br></p>
+            <ul role="list" class="list-none">
+              <li><strong>Name:</strong> data-msf</li>
+              <li><strong>Value:</strong> alert</li>
+            </ul>
+            <p>And bind it to a <span class="opacity-75">Mouse click (tap)</span> interaction.<br>The script will trigger the <span class="opacity-75">1st click</span> to show it and the <span class="opacity-75">2nd click</span> to hide it.<br></p>
+          </div>
+          <div class="hflex-c-sb mt-auto">
+            <div class="modal-nav">
+              <div class="icon mr-2 w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M136.97 252.485L144.041 245.415C148.727 240.729 148.727 233.131 144.041 228.444L60.113 145H436C442.627 145 448 139.627 448 133V123C448 116.373 442.627 111 436 111H60.113L144.041 27.556C148.727 22.87 148.727 15.272 144.041 10.585L136.97 3.515C132.284 -1.171 124.686 -1.171 120 3.515L3.51499 119.515C-1.17101 124.201 -1.17101 131.799 3.51499 136.486L120 252.486C124.686 257.172 132.284 257.172 136.97 252.485Z"></path>
+</svg></div>
+              <div class="uppercase">Back</div>
+            </div>
+            <div class="modal-nav">
+              <div class="uppercase mr-2">NEXT</div>
+              <div class="icon w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M311.03 3.51501L303.959 10.585C299.273 15.271 299.273 22.869 303.959 27.556L387.887 111H12C5.373 111 0 116.373 0 123V133C0 139.627 5.373 145 12 145H387.887L303.959 228.444C299.273 233.13 299.273 240.728 303.959 245.415L311.03 252.485C315.716 257.171 323.314 257.171 328 252.485L444.485 136.485C449.171 131.799 449.171 124.201 444.485 119.514L328 3.51501C323.314 -1.17199 315.716 -1.17199 311.03 3.51501Z"></path>
+</svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="vflex-str-c"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="rounded-4"></div>
+      </div>
+    </div>
+  </div>
+  <div class="section vflex-c-c">
+    <div class="modal-content-wrap">
+      <div scroll="enable" class="modal-close">
+        <div class="_w-full vflex-str-c w-embed"><svg viewbox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M353.047 256L498.604 110.444C516.465 92.5818 516.465 63.6218 498.604 45.7455L466.255 13.3964C448.393 -4.46545 419.433 -4.46545 401.556 13.3964L256 158.953L110.444 13.3964C92.5818 -4.46545 63.6218 -4.46545 45.7455 13.3964L13.3964 45.7455C-4.46545 63.6073 -4.46545 92.5673 13.3964 110.444L158.953 256L13.3964 401.556C-4.46545 419.418 -4.46545 448.378 13.3964 466.255L45.7455 498.604C63.6073 516.465 92.5818 516.465 110.444 498.604L256 353.047L401.556 498.604C419.418 516.465 448.393 516.465 466.255 498.604L498.604 466.255C516.465 448.393 516.465 419.433 498.604 401.556L353.047 256Z"></path>
+</svg></div>
+      </div>
+      <div class="modal-content">
+        <div>
+          <h3 class="mb-2">Back button</h3>
+          <div class="logic-block-divider mb-6"></div>
+          <div class="modal-text">
+            <p>Use this button to let the user go back to the previous step.<br></p>
+            <p>It is recommended that you hide it in the first slide (step) to avoid confusing the users.<br></p>
+            <p>To do so, use a Slider Change interaction to hide it when the first slide enters and show it when the first slide leaves.<br></p>
+            <p>This element can be placed anywhere in the page.<br></p>
+          </div>
+          <div class="hflex-c-sb mt-auto">
+            <div class="modal-nav">
+              <div class="icon mr-2 w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M136.97 252.485L144.041 245.415C148.727 240.729 148.727 233.131 144.041 228.444L60.113 145H436C442.627 145 448 139.627 448 133V123C448 116.373 442.627 111 436 111H60.113L144.041 27.556C148.727 22.87 148.727 15.272 144.041 10.585L136.97 3.515C132.284 -1.171 124.686 -1.171 120 3.515L3.51499 119.515C-1.17101 124.201 -1.17101 131.799 3.51499 136.486L120 252.486C124.686 257.172 132.284 257.172 136.97 252.485Z"></path>
+</svg></div>
+              <div class="uppercase">Back</div>
+            </div>
+            <div class="modal-nav">
+              <div class="uppercase mr-2">NEXT</div>
+              <div class="icon w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M311.03 3.51501L303.959 10.585C299.273 15.271 299.273 22.869 303.959 27.556L387.887 111H12C5.373 111 0 116.373 0 123V133C0 139.627 5.373 145 12 145H387.887L303.959 228.444C299.273 233.13 299.273 240.728 303.959 245.415L311.03 252.485C315.716 257.171 323.314 257.171 328 252.485L444.485 136.485C449.171 131.799 449.171 124.201 444.485 119.514L328 3.51501C323.314 -1.17199 315.716 -1.17199 311.03 3.51501Z"></path>
+</svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="vflex-str-c"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="rounded-4"></div>
+      </div>
+    </div>
+  </div>
+  <div class="section vflex-c-c">
+    <div class="modal-content-wrap">
+      <div scroll="enable" class="modal-close">
+        <div class="_w-full vflex-str-c w-embed"><svg viewbox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M353.047 256L498.604 110.444C516.465 92.5818 516.465 63.6218 498.604 45.7455L466.255 13.3964C448.393 -4.46545 419.433 -4.46545 401.556 13.3964L256 158.953L110.444 13.3964C92.5818 -4.46545 63.6218 -4.46545 45.7455 13.3964L13.3964 45.7455C-4.46545 63.6073 -4.46545 92.5673 13.3964 110.444L158.953 256L13.3964 401.556C-4.46545 419.418 -4.46545 448.378 13.3964 466.255L45.7455 498.604C63.6073 516.465 92.5818 516.465 110.444 498.604L256 353.047L401.556 498.604C419.418 516.465 448.393 516.465 466.255 498.604L498.604 466.255C516.465 448.393 516.465 419.433 498.604 401.556L353.047 256Z"></path>
+</svg></div>
+      </div>
+      <div class="modal-content">
+        <div class="vflex-str-s">
+          <h3 class="mb-2">Alert text</h3>
+          <div class="logic-block-divider mb-6"></div>
+          <div class="modal-text">
+            <p>You can show a global alert when there are missing fields that must be filled.<br></p>
+            <p>Check how it will look:<br></p><a href="#" class="button w-button">Display alert</a></div>
+          <div class="hflex-c-sb mt-auto">
+            <div class="modal-nav">
+              <div class="icon mr-2 w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M136.97 252.485L144.041 245.415C148.727 240.729 148.727 233.131 144.041 228.444L60.113 145H436C442.627 145 448 139.627 448 133V123C448 116.373 442.627 111 436 111H60.113L144.041 27.556C148.727 22.87 148.727 15.272 144.041 10.585L136.97 3.515C132.284 -1.171 124.686 -1.171 120 3.515L3.51499 119.515C-1.17101 124.201 -1.17101 131.799 3.51499 136.486L120 252.486C124.686 257.172 132.284 257.172 136.97 252.485Z"></path>
+</svg></div>
+              <div class="uppercase">Back</div>
+            </div>
+            <div class="modal-nav">
+              <div class="uppercase mr-2">NEXT</div>
+              <div class="icon w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M311.03 3.51501L303.959 10.585C299.273 15.271 299.273 22.869 303.959 27.556L387.887 111H12C5.373 111 0 116.373 0 123V133C0 139.627 5.373 145 12 145H387.887L303.959 228.444C299.273 233.13 299.273 240.728 303.959 245.415L311.03 252.485C315.716 257.171 323.314 257.171 328 252.485L444.485 136.485C449.171 131.799 449.171 124.201 444.485 119.514L328 3.51501C323.314 -1.17199 315.716 -1.17199 311.03 3.51501Z"></path>
+</svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="vflex-str-c"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="rounded-4"></div>
+      </div>
+    </div>
+  </div>
+  <div class="section vflex-c-c">
+    <div class="modal-content-wrap">
+      <div scroll="enable" class="modal-close">
+        <div class="_w-full vflex-str-c w-embed"><svg viewbox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M353.047 256L498.604 110.444C516.465 92.5818 516.465 63.6218 498.604 45.7455L466.255 13.3964C448.393 -4.46545 419.433 -4.46545 401.556 13.3964L256 158.953L110.444 13.3964C92.5818 -4.46545 63.6218 -4.46545 45.7455 13.3964L13.3964 45.7455C-4.46545 63.6073 -4.46545 92.5673 13.3964 110.444L158.953 256L13.3964 401.556C-4.46545 419.418 -4.46545 448.378 13.3964 466.255L45.7455 498.604C63.6073 516.465 92.5818 516.465 110.444 498.604L256 353.047L401.556 498.604C419.418 516.465 448.393 516.465 466.255 498.604L498.604 466.255C516.465 448.393 516.465 419.433 498.604 401.556L353.047 256Z"></path>
+</svg></div>
+      </div>
+      <div class="modal-content">
+        <div class="vflex-str-s">
+          <h3 class="mb-2">Back button text</h3>
+          <div class="logic-block-divider mb-6"></div>
+          <div class="modal-text">
+            <p>Additionally, you can set a different text of the back button in any step.<br></p>
+            <p>If you don&#x27;t set the text for a particular step <em class="opacity-75">(for example you set the text for the 2nd and 4th step, but not the 3rd)</em> it will fall back to the lower closest one <em class="opacity-75">(the 2nd one in this case)</em>.<br></p>
+          </div>
+          <div class="hflex-c-sb mt-auto">
+            <div class="modal-nav">
+              <div class="icon mr-2 w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M136.97 252.485L144.041 245.415C148.727 240.729 148.727 233.131 144.041 228.444L60.113 145H436C442.627 145 448 139.627 448 133V123C448 116.373 442.627 111 436 111H60.113L144.041 27.556C148.727 22.87 148.727 15.272 144.041 10.585L136.97 3.515C132.284 -1.171 124.686 -1.171 120 3.515L3.51499 119.515C-1.17101 124.201 -1.17101 131.799 3.51499 136.486L120 252.486C124.686 257.172 132.284 257.172 136.97 252.485Z"></path>
+</svg></div>
+              <div class="uppercase">Back</div>
+            </div>
+            <div class="modal-nav">
+              <div class="uppercase mr-2">NEXT</div>
+              <div class="icon w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M311.03 3.51501L303.959 10.585C299.273 15.271 299.273 22.869 303.959 27.556L387.887 111H12C5.373 111 0 116.373 0 123V133C0 139.627 5.373 145 12 145H387.887L303.959 228.444C299.273 233.13 299.273 240.728 303.959 245.415L311.03 252.485C315.716 257.171 323.314 257.171 328 252.485L444.485 136.485C449.171 131.799 449.171 124.201 444.485 119.514L328 3.51501C323.314 -1.17199 315.716 -1.17199 311.03 3.51501Z"></path>
+</svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="vflex-str-c"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="rounded-4"></div>
+      </div>
+    </div>
+  </div>
+  <div class="section vflex-c-c">
+    <div class="modal-content-wrap">
+      <div scroll="enable" class="modal-close">
+        <div class="_w-full vflex-str-c w-embed"><svg viewbox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M353.047 256L498.604 110.444C516.465 92.5818 516.465 63.6218 498.604 45.7455L466.255 13.3964C448.393 -4.46545 419.433 -4.46545 401.556 13.3964L256 158.953L110.444 13.3964C92.5818 -4.46545 63.6218 -4.46545 45.7455 13.3964L13.3964 45.7455C-4.46545 63.6073 -4.46545 92.5673 13.3964 110.444L158.953 256L13.3964 401.556C-4.46545 419.418 -4.46545 448.378 13.3964 466.255L45.7455 498.604C63.6073 516.465 92.5818 516.465 110.444 498.604L256 353.047L401.556 498.604C419.418 516.465 448.393 516.465 466.255 498.604L498.604 466.255C516.465 448.393 516.465 419.433 498.604 401.556L353.047 256Z"></path>
+</svg></div>
+      </div>
+      <div class="modal-content">
+        <div class="vflex-str-s">
+          <h3 class="mb-2">Back button text</h3>
+          <div class="logic-block-divider mb-6"></div>
+          <div class="modal-text">
+            <p>Additionally, you can set a different text of the next button in any step.<br></p>
+            <p>If you don&#x27;t set the text for a particular step <em class="opacity-75">(for example you set the text for the 2nd and 4th step, but not the 3rd)</em> it will fall back to the lower closest one <em class="opacity-75">(the 2nd one in this case)</em>.<br></p>
+          </div>
+          <div class="hflex-c-sb mt-auto">
+            <div class="modal-nav">
+              <div class="icon mr-2 w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M136.97 252.485L144.041 245.415C148.727 240.729 148.727 233.131 144.041 228.444L60.113 145H436C442.627 145 448 139.627 448 133V123C448 116.373 442.627 111 436 111H60.113L144.041 27.556C148.727 22.87 148.727 15.272 144.041 10.585L136.97 3.515C132.284 -1.171 124.686 -1.171 120 3.515L3.51499 119.515C-1.17101 124.201 -1.17101 131.799 3.51499 136.486L120 252.486C124.686 257.172 132.284 257.172 136.97 252.485Z"></path>
+</svg></div>
+              <div class="uppercase">Back</div>
+            </div>
+            <div class="modal-nav">
+              <div class="uppercase mr-2">NEXT</div>
+              <div class="icon w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M311.03 3.51501L303.959 10.585C299.273 15.271 299.273 22.869 303.959 27.556L387.887 111H12C5.373 111 0 116.373 0 123V133C0 139.627 5.373 145 12 145H387.887L303.959 228.444C299.273 233.13 299.273 240.728 303.959 245.415L311.03 252.485C315.716 257.171 323.314 257.171 328 252.485L444.485 136.485C449.171 131.799 449.171 124.201 444.485 119.514L328 3.51501C323.314 -1.17199 315.716 -1.17199 311.03 3.51501Z"></path>
+</svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="vflex-str-c"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="rounded-4"></div>
+      </div>
+    </div>
+  </div>
+  <div class="section vflex-c-c">
+    <div class="modal-content-wrap">
+      <div scroll="enable" class="modal-close">
+        <div class="_w-full vflex-str-c w-embed"><svg viewbox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M353.047 256L498.604 110.444C516.465 92.5818 516.465 63.6218 498.604 45.7455L466.255 13.3964C448.393 -4.46545 419.433 -4.46545 401.556 13.3964L256 158.953L110.444 13.3964C92.5818 -4.46545 63.6218 -4.46545 45.7455 13.3964L13.3964 45.7455C-4.46545 63.6073 -4.46545 92.5673 13.3964 110.444L158.953 256L13.3964 401.556C-4.46545 419.418 -4.46545 448.378 13.3964 466.255L45.7455 498.604C63.6073 516.465 92.5818 516.465 110.444 498.604L256 353.047L401.556 498.604C419.418 516.465 448.393 516.465 466.255 498.604L498.604 466.255C516.465 448.393 516.465 419.433 498.604 401.556L353.047 256Z"></path>
+</svg></div>
+      </div>
+      <div class="modal-content">
+        <div class="vflex-str-s">
+          <h3 class="mb-2">Display completed %</h3>
+          <div class="logic-block-divider mb-6"></div>
+          <div class="modal-text">
+            <p>You can set any text element (paragraph, text block, heading, list item...) to display the completed % of the steps:<br></p>
+            <p>It will show the percentage starting from 0% in the first step to 100% in the last step.<br></p>
+            <p>This element can be placed anywhere in the page.<br></p>
+          </div>
+          <div class="hflex-c-sb mt-auto">
+            <div class="modal-nav">
+              <div class="icon mr-2 w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M136.97 252.485L144.041 245.415C148.727 240.729 148.727 233.131 144.041 228.444L60.113 145H436C442.627 145 448 139.627 448 133V123C448 116.373 442.627 111 436 111H60.113L144.041 27.556C148.727 22.87 148.727 15.272 144.041 10.585L136.97 3.515C132.284 -1.171 124.686 -1.171 120 3.515L3.51499 119.515C-1.17101 124.201 -1.17101 131.799 3.51499 136.486L120 252.486C124.686 257.172 132.284 257.172 136.97 252.485Z"></path>
+</svg></div>
+              <div class="uppercase">Back</div>
+            </div>
+            <div class="modal-nav">
+              <div class="uppercase mr-2">NEXT</div>
+              <div class="icon w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M311.03 3.51501L303.959 10.585C299.273 15.271 299.273 22.869 303.959 27.556L387.887 111H12C5.373 111 0 116.373 0 123V133C0 139.627 5.373 145 12 145H387.887L303.959 228.444C299.273 233.13 299.273 240.728 303.959 245.415L311.03 252.485C315.716 257.171 323.314 257.171 328 252.485L444.485 136.485C449.171 131.799 449.171 124.201 444.485 119.514L328 3.51501C323.314 -1.17199 315.716 -1.17199 311.03 3.51501Z"></path>
+</svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="vflex-str-c"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="rounded-4"></div>
+      </div>
+    </div>
+  </div>
+  <div class="section vflex-c-c">
+    <div class="modal-content-wrap">
+      <div scroll="enable" class="modal-close">
+        <div class="_w-full vflex-str-c w-embed"><svg viewbox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M353.047 256L498.604 110.444C516.465 92.5818 516.465 63.6218 498.604 45.7455L466.255 13.3964C448.393 -4.46545 419.433 -4.46545 401.556 13.3964L256 158.953L110.444 13.3964C92.5818 -4.46545 63.6218 -4.46545 45.7455 13.3964L13.3964 45.7455C-4.46545 63.6073 -4.46545 92.5673 13.3964 110.444L158.953 256L13.3964 401.556C-4.46545 419.418 -4.46545 448.378 13.3964 466.255L45.7455 498.604C63.6073 516.465 92.5818 516.465 110.444 498.604L256 353.047L401.556 498.604C419.418 516.465 448.393 516.465 466.255 498.604L498.604 466.255C516.465 448.393 516.465 419.433 498.604 401.556L353.047 256Z"></path>
+</svg></div>
+      </div>
+      <div class="modal-content">
+        <div class="vflex-str-s">
+          <h3 class="mb-2">Display current step</h3>
+          <div class="logic-block-divider mb-6"></div>
+          <div class="modal-text">
+            <p>You can set any text element (paragraph, text block, heading, list item...) to display the number of the current step.<br></p>
+            <p>If you want to show the number of total steps, you should to it manually as it is a fixed value.<br></p>
+            <p>This element can be placed anywhere in the page.<br></p>
+          </div>
+          <div class="hflex-c-sb mt-auto">
+            <div class="modal-nav">
+              <div class="icon mr-2 w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M136.97 252.485L144.041 245.415C148.727 240.729 148.727 233.131 144.041 228.444L60.113 145H436C442.627 145 448 139.627 448 133V123C448 116.373 442.627 111 436 111H60.113L144.041 27.556C148.727 22.87 148.727 15.272 144.041 10.585L136.97 3.515C132.284 -1.171 124.686 -1.171 120 3.515L3.51499 119.515C-1.17101 124.201 -1.17101 131.799 3.51499 136.486L120 252.486C124.686 257.172 132.284 257.172 136.97 252.485Z"></path>
+</svg></div>
+              <div class="uppercase">Back</div>
+            </div>
+            <div class="modal-nav">
+              <div class="uppercase mr-2">NEXT</div>
+              <div class="icon w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M311.03 3.51501L303.959 10.585C299.273 15.271 299.273 22.869 303.959 27.556L387.887 111H12C5.373 111 0 116.373 0 123V133C0 139.627 5.373 145 12 145H387.887L303.959 228.444C299.273 233.13 299.273 240.728 303.959 245.415L311.03 252.485C315.716 257.171 323.314 257.171 328 252.485L444.485 136.485C449.171 131.799 449.171 124.201 444.485 119.514L328 3.51501C323.314 -1.17199 315.716 -1.17199 311.03 3.51501Z"></path>
+</svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="vflex-str-c"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="rounded-4"></div>
+      </div>
+    </div>
+  </div>
+  <div class="section vflex-c-c">
+    <div class="modal-content-wrap">
+      <div scroll="enable" class="modal-close">
+        <div class="_w-full vflex-str-c w-embed"><svg viewbox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M353.047 256L498.604 110.444C516.465 92.5818 516.465 63.6218 498.604 45.7455L466.255 13.3964C448.393 -4.46545 419.433 -4.46545 401.556 13.3964L256 158.953L110.444 13.3964C92.5818 -4.46545 63.6218 -4.46545 45.7455 13.3964L13.3964 45.7455C-4.46545 63.6073 -4.46545 92.5673 13.3964 110.444L158.953 256L13.3964 401.556C-4.46545 419.418 -4.46545 448.378 13.3964 466.255L45.7455 498.604C63.6073 516.465 92.5818 516.465 110.444 498.604L256 353.047L401.556 498.604C419.418 516.465 448.393 516.465 466.255 498.604L498.604 466.255C516.465 448.393 516.465 419.433 498.604 401.556L353.047 256Z"></path>
+</svg></div>
+      </div>
+      <div class="modal-content">
+        <div class="vflex-str-s">
+          <h3 class="mb-2">Custom nav links</h3>
+          <div class="logic-block-divider mb-6"></div>
+          <div class="modal-text">
+            <p>You can let the user jump to a specific step adding this custom nav links.<br></p>
+            <p>To do so, give this custom attribute to the element that should trigger it when clicked:<br></p>
+            <ul role="list" class="list-none">
+              <li><strong>Name:</strong> data-msf-nav</li>
+              <li><strong>Value:</strong> The number of the step (<strong>Eg:</strong> 2)</li>
+            </ul>
+            <p>This elements can be placed anywhere in the page.<br></p>
+          </div>
+          <div class="hflex-c-sb mt-auto">
+            <div class="modal-nav">
+              <div class="icon mr-2 w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M136.97 252.485L144.041 245.415C148.727 240.729 148.727 233.131 144.041 228.444L60.113 145H436C442.627 145 448 139.627 448 133V123C448 116.373 442.627 111 436 111H60.113L144.041 27.556C148.727 22.87 148.727 15.272 144.041 10.585L136.97 3.515C132.284 -1.171 124.686 -1.171 120 3.515L3.51499 119.515C-1.17101 124.201 -1.17101 131.799 3.51499 136.486L120 252.486C124.686 257.172 132.284 257.172 136.97 252.485Z"></path>
+</svg></div>
+              <div class="uppercase">Back</div>
+            </div>
+            <div class="modal-nav">
+              <div class="uppercase mr-2">NEXT</div>
+              <div class="icon w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M311.03 3.51501L303.959 10.585C299.273 15.271 299.273 22.869 303.959 27.556L387.887 111H12C5.373 111 0 116.373 0 123V133C0 139.627 5.373 145 12 145H387.887L303.959 228.444C299.273 233.13 299.273 240.728 303.959 245.415L311.03 252.485C315.716 257.171 323.314 257.171 328 252.485L444.485 136.485C449.171 131.799 449.171 124.201 444.485 119.514L328 3.51501C323.314 -1.17199 315.716 -1.17199 311.03 3.51501Z"></path>
+</svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="vflex-str-c"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="rounded-4"></div>
+      </div>
+    </div>
+  </div>
+  <div class="section vflex-c-c">
+    <div class="modal-content-wrap">
+      <div scroll="enable" class="modal-close">
+        <div class="_w-full vflex-str-c w-embed"><svg viewbox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M353.047 256L498.604 110.444C516.465 92.5818 516.465 63.6218 498.604 45.7455L466.255 13.3964C448.393 -4.46545 419.433 -4.46545 401.556 13.3964L256 158.953L110.444 13.3964C92.5818 -4.46545 63.6218 -4.46545 45.7455 13.3964L13.3964 45.7455C-4.46545 63.6073 -4.46545 92.5673 13.3964 110.444L158.953 256L13.3964 401.556C-4.46545 419.418 -4.46545 448.378 13.3964 466.255L45.7455 498.604C63.6073 516.465 92.5818 516.465 110.444 498.604L256 353.047L401.556 498.604C419.418 516.465 448.393 516.465 466.255 498.604L498.604 466.255C516.465 448.393 516.465 419.433 498.604 401.556L353.047 256Z"></path>
+</svg></div>
+      </div>
+      <div class="modal-content">
+        <div class="vflex-str-s">
+          <h3 class="mb-2">Display filled values</h3>
+          <div class="logic-block-divider mb-6"></div>
+          <div class="modal-text">
+            <p>You can set the value of an input to be displayed on any text element (paragraph, text block, heading, list item...).<br></p>
+            <p>To do so, give this custom attribute to the text element that should show it:<br></p>
+            <ul role="list" class="list-none">
+              <li><strong>Name:</strong> data-msf-value</li>
+              <li><strong>Value:</strong> The ID of the input (<strong>Eg:</strong> email)</li>
+            </ul>
+            <p>This elements can be placed anywhere in the page.<br></p>
+          </div>
+          <div class="hflex-c-sb mt-auto">
+            <div class="modal-nav">
+              <div class="icon mr-2 w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M136.97 252.485L144.041 245.415C148.727 240.729 148.727 233.131 144.041 228.444L60.113 145H436C442.627 145 448 139.627 448 133V123C448 116.373 442.627 111 436 111H60.113L144.041 27.556C148.727 22.87 148.727 15.272 144.041 10.585L136.97 3.515C132.284 -1.171 124.686 -1.171 120 3.515L3.51499 119.515C-1.17101 124.201 -1.17101 131.799 3.51499 136.486L120 252.486C124.686 257.172 132.284 257.172 136.97 252.485Z"></path>
+</svg></div>
+              <div class="uppercase">Back</div>
+            </div>
+            <div class="modal-nav">
+              <div class="uppercase mr-2">NEXT</div>
+              <div class="icon w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M311.03 3.51501L303.959 10.585C299.273 15.271 299.273 22.869 303.959 27.556L387.887 111H12C5.373 111 0 116.373 0 123V133C0 139.627 5.373 145 12 145H387.887L303.959 228.444C299.273 233.13 299.273 240.728 303.959 245.415L311.03 252.485C315.716 257.171 323.314 257.171 328 252.485L444.485 136.485C449.171 131.799 449.171 124.201 444.485 119.514L328 3.51501C323.314 -1.17199 315.716 -1.17199 311.03 3.51501Z"></path>
+</svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="vflex-str-c"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="rounded-4"></div>
+      </div>
+    </div>
+  </div>
+  <div class="section vflex-c-c">
+    <div class="modal-content-wrap">
+      <div scroll="enable" class="modal-close">
+        <div class="_w-full vflex-str-c w-embed"><svg viewbox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M353.047 256L498.604 110.444C516.465 92.5818 516.465 63.6218 498.604 45.7455L466.255 13.3964C448.393 -4.46545 419.433 -4.46545 401.556 13.3964L256 158.953L110.444 13.3964C92.5818 -4.46545 63.6218 -4.46545 45.7455 13.3964L13.3964 45.7455C-4.46545 63.6073 -4.46545 92.5673 13.3964 110.444L158.953 256L13.3964 401.556C-4.46545 419.418 -4.46545 448.378 13.3964 466.255L45.7455 498.604C63.6073 516.465 92.5818 516.465 110.444 498.604L256 353.047L401.556 498.604C419.418 516.465 448.393 516.465 466.255 498.604L498.604 466.255C516.465 448.393 516.465 419.433 498.604 401.556L353.047 256Z"></path>
+</svg></div>
+      </div>
+      <div class="modal-content">
+        <div class="vflex-str-s">
+          <h3 class="mb-2">Global options</h3>
+          <div class="logic-block-divider mb-6"></div>
+          <div class="modal-text">
+            <p>The navigation buttons (next, back, and custom navs) are disabled once the form is submitted.<br></p>
+            <p>You can additionally hide the back and next button by checking the option. They will be set to <span class="opacity-75">display:none</span>.<br></p>
+          </div>
+          <div class="hflex-c-sb mt-auto">
+            <div class="modal-nav">
+              <div class="icon mr-2 w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M136.97 252.485L144.041 245.415C148.727 240.729 148.727 233.131 144.041 228.444L60.113 145H436C442.627 145 448 139.627 448 133V123C448 116.373 442.627 111 436 111H60.113L144.041 27.556C148.727 22.87 148.727 15.272 144.041 10.585L136.97 3.515C132.284 -1.171 124.686 -1.171 120 3.515L3.51499 119.515C-1.17101 124.201 -1.17101 131.799 3.51499 136.486L120 252.486C124.686 257.172 132.284 257.172 136.97 252.485Z"></path>
+</svg></div>
+              <div class="uppercase">Back</div>
+            </div>
+            <div class="modal-nav">
+              <div class="uppercase mr-2">NEXT</div>
+              <div class="icon w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M311.03 3.51501L303.959 10.585C299.273 15.271 299.273 22.869 303.959 27.556L387.887 111H12C5.373 111 0 116.373 0 123V133C0 139.627 5.373 145 12 145H387.887L303.959 228.444C299.273 233.13 299.273 240.728 303.959 245.415L311.03 252.485C315.716 257.171 323.314 257.171 328 252.485L444.485 136.485C449.171 131.799 449.171 124.201 444.485 119.514L328 3.51501C323.314 -1.17199 315.716 -1.17199 311.03 3.51501Z"></path>
+</svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="vflex-str-c"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="rounded-4"></div>
+      </div>
+    </div>
+  </div>
+  <div class="section vflex-c-c">
+    <div class="modal-content-wrap">
+      <div scroll="enable" class="modal-close">
+        <div class="_w-full vflex-str-c w-embed"><svg viewbox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M353.047 256L498.604 110.444C516.465 92.5818 516.465 63.6218 498.604 45.7455L466.255 13.3964C448.393 -4.46545 419.433 -4.46545 401.556 13.3964L256 158.953L110.444 13.3964C92.5818 -4.46545 63.6218 -4.46545 45.7455 13.3964L13.3964 45.7455C-4.46545 63.6073 -4.46545 92.5673 13.3964 110.444L158.953 256L13.3964 401.556C-4.46545 419.418 -4.46545 448.378 13.3964 466.255L45.7455 498.604C63.6073 516.465 92.5818 516.465 110.444 498.604L256 353.047L401.556 498.604C419.418 516.465 448.393 516.465 466.255 498.604L498.604 466.255C516.465 448.393 516.465 419.433 498.604 401.556L353.047 256Z"></path>
+</svg></div>
+      </div>
+      <div class="modal-content">
+        <div class="vflex-str-s">
+          <h3 class="mb-2">Warning class</h3>
+          <div class="logic-block-divider mb-6"></div>
+          <div class="modal-text">
+            <p>You can add a CSS class to each missing input when the user tries to jump to the next step.<br></p>
+            <p>This is useful to highlight those inputs that should be filled, like adding a colored border.<br></p>
+            <p>Once the input is filled, that CSS class will be removed.<br></p>
+            <p>Radio inputs and checkboxes should be set to <strong>Custom</strong> in the Webflow Designer in order to display it correctly.<br></p>
+          </div>
+          <div class="hflex-c-sb mt-auto">
+            <div class="modal-nav">
+              <div class="icon mr-2 w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M136.97 252.485L144.041 245.415C148.727 240.729 148.727 233.131 144.041 228.444L60.113 145H436C442.627 145 448 139.627 448 133V123C448 116.373 442.627 111 436 111H60.113L144.041 27.556C148.727 22.87 148.727 15.272 144.041 10.585L136.97 3.515C132.284 -1.171 124.686 -1.171 120 3.515L3.51499 119.515C-1.17101 124.201 -1.17101 131.799 3.51499 136.486L120 252.486C124.686 257.172 132.284 257.172 136.97 252.485Z"></path>
+</svg></div>
+              <div class="uppercase">Back</div>
+            </div>
+            <div class="modal-nav">
+              <div class="uppercase mr-2">NEXT</div>
+              <div class="icon w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M311.03 3.51501L303.959 10.585C299.273 15.271 299.273 22.869 303.959 27.556L387.887 111H12C5.373 111 0 116.373 0 123V133C0 139.627 5.373 145 12 145H387.887L303.959 228.444C299.273 233.13 299.273 240.728 303.959 245.415L311.03 252.485C315.716 257.171 323.314 257.171 328 252.485L444.485 136.485C449.171 131.799 449.171 124.201 444.485 119.514L328 3.51501C323.314 -1.17199 315.716 -1.17199 311.03 3.51501Z"></path>
+</svg></div>
+            </div>
+          </div>
+        </div>
+        <div class="vflex-str-c"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" alt="" class="rounded-4"></div>
+      </div>
+    </div>
+  </div>
+  <div class="section vflex-c-c">
+    <div class="modal-content-wrap">
+      <div scroll="enable" class="modal-close">
+        <div class="_w-full vflex-str-c w-embed"><svg viewbox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M353.047 256L498.604 110.444C516.465 92.5818 516.465 63.6218 498.604 45.7455L466.255 13.3964C448.393 -4.46545 419.433 -4.46545 401.556 13.3964L256 158.953L110.444 13.3964C92.5818 -4.46545 63.6218 -4.46545 45.7455 13.3964L13.3964 45.7455C-4.46545 63.6073 -4.46545 92.5673 13.3964 110.444L158.953 256L13.3964 401.556C-4.46545 419.418 -4.46545 448.378 13.3964 466.255L45.7455 498.604C63.6073 516.465 92.5818 516.465 110.444 498.604L256 353.047L401.556 498.604C419.418 516.465 448.393 516.465 466.255 498.604L498.604 466.255C516.465 448.393 516.465 419.433 498.604 401.556L353.047 256Z"></path>
+</svg></div>
+      </div>
+      <div class="modal-content">
+        <div class="vflex-str-s">
+          <h3 class="mb-2">Extra hidden form</h3>
+          <div class="logic-block-divider mb-6"></div>
+          <div class="modal-text">
+            <p>You can send an additional hidden form when the user completes a specific step.<br></p>
+            <p>This feature is useful if you want to make sure that some of the info is collected even if the user doesn&#x27;t complete the whole form.<br></p>
+            <p>Add this custom attribute to each step that you want to collect in the hidden form:<br></p>
+            <ul role="list" class="list-none">
+              <li><strong>Name:</strong> data-msf</li>
+              <li><strong>Value:</strong> hidden</li>
+            </ul>
+            <p>The script will automatically create the hidden form, populate and send it when the user completes the desired step.<br></p>
+          </div>
+          <div class="hflex-c-sb mt-auto">
+            <div class="modal-nav">
+              <div class="icon mr-2 w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M136.97 252.485L144.041 245.415C148.727 240.729 148.727 233.131 144.041 228.444L60.113 145H436C442.627 145 448 139.627 448 133V123C448 116.373 442.627 111 436 111H60.113L144.041 27.556C148.727 22.87 148.727 15.272 144.041 10.585L136.97 3.515C132.284 -1.171 124.686 -1.171 120 3.515L3.51499 119.515C-1.17101 124.201 -1.17101 131.799 3.51499 136.486L120 252.486C124.686 257.172 132.284 257.172 136.97 252.485Z"></path>
+</svg></div>
+              <div class="uppercase">Back</div>
+            </div>
+            <div class="modal-nav">
+              <div class="uppercase mr-2">NEXT</div>
+              <div class="icon w-embed"><svg viewbox="0 0 448 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path d="M311.03 3.51501L303.959 10.585C299.273 15.271 299.273 22.869 303.959 27.556L387.887 111H12C5.373 111 0 116.373 0 123V133C0 139.627 5.373 145 12 145H387.887L303.959 228.444C299.273 233.13 299.273 240.728 303.959 245.415L311.03 252.485C315.716 257.171 323.314 257.171 328 252.485L444.485 136.485C449.171 131.799 449.171 124.201 444.485 119.514L328 3.51501C323.314 -1.17199 315.716 -1.17199 311.03 3.51501Z"></path>
+</svg></div>
             </div>
           </div>
         </div>

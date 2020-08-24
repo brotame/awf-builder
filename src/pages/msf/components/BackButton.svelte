@@ -24,7 +24,13 @@
   }
 
   onDestroy(() => {
-    if (!msfOptional.checkSelected(key)) deleteParams();
+    if (!msfOptional.checkSelected(key)) {
+      deleteParams();
+
+      // If back text is active, deactivate it
+      if (msfOptional.checkSelected('backText'))
+        msfOptional.modify('backText', false);
+    }
   });
 </script>
 

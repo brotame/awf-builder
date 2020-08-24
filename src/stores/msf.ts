@@ -8,13 +8,21 @@ const required: msfBlocks[] = [
 ];
 
 const optional: msfBlocks[] = [
-  { key: 'alertElement', title: 'Alert Element', selected: false },
+  { key: 'alertSelector', title: 'Alert Element', selected: false },
   { key: 'alertText', title: 'Alert Text', selected: false },
   { key: 'backText', title: 'Back Button Text', selected: false },
   { key: 'backSelector', title: 'Back Button', selected: false },
+  {
+    key: 'completedPercentageSelector',
+    title: 'Display Completed %',
+    selected: false,
+  },
+  {
+    key: 'currentStepSelector',
+    title: 'Display Current Step',
+    selected: false,
+  },
   { key: 'customNav', title: 'Custom Nav Links', selected: false },
-  { key: 'displayCompleted', title: 'Display Completed %', selected: false },
-  { key: 'displayCurrentStep', title: 'Display Current Step', selected: false },
   { key: 'displayValues', title: 'Display Filled Values', selected: false },
   { key: 'hiddenForm', title: 'Extra Hidden Form', selected: false },
   { key: 'msfGlobal', title: 'Global Options', selected: false },
@@ -54,3 +62,6 @@ export const msfOptional = {
     return selected;
   },
 };
+
+// Checks if the starter form has been copied
+export const msfCopy = writable(false);

@@ -20,7 +20,9 @@
   <!-- Select -->
   <select {id} {name} class="input-field w-select" bind:value on:input>
     {#each options as option (option.value)}
-      <option value={option.value}>{option.name}</option>
+      <option value={option.value} disabled={option.disabled}>
+        {option.name}
+      </option>
     {/each}
   </select>
 </div>

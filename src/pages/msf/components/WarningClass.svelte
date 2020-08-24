@@ -33,5 +33,4 @@
   id="warning-class"
   name="Warning Class"
   placeholder="Eg: warning"
-  selector="class"
   bind:value />

@@ -24,7 +24,7 @@
     { name: 'Disable', value: 'disable' },
     { name: 'Require', value: 'require' },
     { name: 'Unrequire', value: 'unrequire' },
-    { name: 'Custom', value: 'custom' },
+    { name: 'Interaction', value: 'custom' },
   ];
 
   // Functions

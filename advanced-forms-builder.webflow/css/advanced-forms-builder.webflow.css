@@ -621,7 +621,7 @@ label {
   overflow: auto;
   max-height: 90vh;
   max-width: 52rem;
-  padding: 4rem 3rem;
+  padding: 3.5rem 3rem;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -1474,6 +1474,25 @@ label {
   justify-content: center;
 }
 
+.modal-text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+  max-height: 22rem;
+  margin-bottom: 1.5rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 991px) {
   h1 {
     font-size: 2.5rem;
@@ -1615,6 +1634,10 @@ label {
     padding-top: 2rem;
     padding-bottom: 1.25rem;
   }
+  .modal-text {
+    overflow: visible;
+    max-height: none;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -1684,6 +1707,15 @@ label {
     max-width: 16rem;
     padding-right: 1.5rem;
     padding-left: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #w-node-e5906dab06c2-55331578 {
+    -webkit-box-ordinal-group: -9998;
+    -webkit-order: -9999;
+    -ms-flex-order: -9999;
+    order: -9999;
   }
 }
 

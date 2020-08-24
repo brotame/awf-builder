@@ -24,7 +24,7 @@
 
   // Functions
   const dispatch = createEventDispatcher();
-  const editLogic = getContext('edit');
+  const { editLogic } = getContext('logic');
 
   function convertOperator(operator: ConditionOperator) {
     if (operator === 'equal') return 'is equal to';

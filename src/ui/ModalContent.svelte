@@ -13,17 +13,42 @@
   export let currentSlide: number,
     title: string,
     content: string,
-    image: string,
+    video: string,
     isLast: boolean;
+
+  // Variables
+  let videoElement: HTMLMediaElement;
+
+  // Reactive
+  $: if (video) restartVideo();
 
   // Functions
   const dispatch = createEventDispatcher();
+
+  function restartVideo() {
+    if (!videoElement) return;
+    videoElement.load();
+  }
 </script>
 
 <style>
   .hidden {
     opacity: 0;
     pointer-events: none;
+  }
+  @media screen and (max-width: 767px) {
+    .modal-image {
+      -webkit-box-ordinal-group: -9998;
+      -webkit-order: -9999;
+      -ms-flex-order: -9999;
+      order: -9999;
+    }
+  }
+
+  video {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
   }
 </style>
 
@@ -43,7 +68,9 @@
       <div class="logic-block-divider mb-4" />
 
       <!-- Text -->
-      {@html content}
+      <div class="modal-text">
+        {@html content}
+      </div>
 
       <!-- Navigation -->
       <div class="hflex-c-sb mt-auto">
@@ -67,16 +94,25 @@
       </div>
     </div>
 
-    <!-- Modal Close -->
-    <div class="modal-close" on:click={() => dispatch('closemodal')}>
-      <div class="_w-full vflex-str-c">
-        <ModalCloseIcon />
-      </div>
-    </div>
-
     <!-- Modal Image -->
-    <div class="vflex-str-c">
-      <img src={image} alt={title} class="rounded-4" />
+    <div class="vflex-str-c modal-image">
+      <!-- <img src={image} alt={title} class="rounded-4" /> -->
+
+      <video
+        autoplay={true}
+        loop={true}
+        muted={true}
+        playsinline={true}
+        bind:this={videoElement}>
+        <source src={video} />
+      </video>
+    </div>
+  </div>
+
+  <!-- Modal Close -->
+  <div class="modal-close" on:click={() => dispatch('closemodal')}>
+    <div class="_w-full vflex-str-c">
+      <ModalCloseIcon />
     </div>
   </div>
 </div>

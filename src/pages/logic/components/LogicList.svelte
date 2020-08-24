@@ -17,6 +17,7 @@
   const deleteLogic = (e: CustomEvent) => {
     logicStore.remove(e.detail);
   };
+
   const dispatch = createEventDispatcher();
 </script>
 

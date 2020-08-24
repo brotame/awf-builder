@@ -18,31 +18,30 @@ const generatedCode = derived(
 
     const msfString =
       $msfStore.formSelector && $msfStore.nextSelector
-        ? `new MSF(${stringifyObject($msfStore, {
+        ? `new AWF.MSF(${stringifyObject($msfStore, {
             inlineCharacterLimit: 99999,
           })});
-      `
+  `
         : '';
 
     const logicString =
       $logicExport.logicList.length > 0
-        ? `new ConditionalLogic(${stringifyObject($logicExport, {
+        ? `new AWF.Logic(${stringifyObject($logicExport, {
             inlineCharacterLimit: 99999,
           })});`
         : '';
 
-    return `
-    <!-- Advanced Forms Code -->
-    ${script}
+    return `<!-- Advanced Forms Code -->
+${script}
 
-    <!-- Advanced Forms Init -->
-    <script>
-    var Webflow = Webflow || [];
-    Webflow.push(function () {
-      ${msfString}${logicString}
-    )};
-    <\/script>
-    `;
+<!-- Advanced Forms Init -->
+<script>
+var Webflow = Webflow || [];
+Webflow.push(function () {
+  ${msfString}${logicString}
+});
+<\/script>
+`;
   }
 );
 
