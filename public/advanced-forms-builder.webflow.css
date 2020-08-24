@@ -231,8 +231,10 @@ label {
 .button.outline {
   background-color: transparent;
   box-shadow: inset 0 0 0 1px #1a936f;
-  -webkit-transition: box-shadow 250ms ease, color 250ms ease, background-color 250ms ease;
-  transition: box-shadow 250ms ease, color 250ms ease, background-color 250ms ease;
+  -webkit-transition: box-shadow 250ms ease, color 250ms ease,
+    background-color 250ms ease;
+  transition: box-shadow 250ms ease, color 250ms ease,
+    background-color 250ms ease;
   color: #1a936f;
 }
 
@@ -1721,13 +1723,19 @@ label {
 
 @font-face {
   font-family: 'Brownstd';
-  src: url('../fonts/BrownStd-Regular.woff2') format('woff2'), url('../fonts/BrownStd-Regular.eot') format('embedded-opentype'), url('../fonts/BrownStd-Regular.woff') format('woff'), url('../fonts/BrownStd-Regular.ttf') format('truetype'), url('../fonts/BrownStd-Regular.otf') format('opentype');
+  src: url('./fonts/BrownStd-Regular.woff2') format('woff2'),
+    url('./fonts/BrownStd-Regular.eot') format('embedded-opentype'),
+    url('./fonts/BrownStd-Regular.woff') format('woff'),
+    url('./fonts/BrownStd-Regular.ttf') format('truetype'),
+    url('./fonts/BrownStd-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'Brownstd';
-  src: url('../fonts/BrownStd-Bold.eot') format('embedded-opentype'), url('../fonts/BrownStd-Bold.ttf') format('truetype'), url('../fonts/BrownStd-Bold.otf') format('opentype');
+  src: url('./fonts/BrownStd-Bold.eot') format('embedded-opentype'),
+    url('./fonts/BrownStd-Bold.ttf') format('truetype'),
+    url('./fonts/BrownStd-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
 }

@@ -26,7 +26,6 @@
   function setDefaults() {
     form = '#msf';
     next = '#msf-next';
-    console.log($msfStore);
     $msfCopy = false;
   }
 </script>

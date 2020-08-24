@@ -25,7 +25,7 @@
 </script>
 
 <svelte:head>
-  <link href="/prism.css" rel="stylesheet" />
+  <link href="./prism.css" rel="stylesheet" />
 </svelte:head>
 
 <div class="container max-w-2xl">
