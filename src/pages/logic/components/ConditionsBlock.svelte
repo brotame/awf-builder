@@ -155,15 +155,8 @@
   $: condition.selector = selector;
   $: condition.operator = operator;
   $: condition.value = value;
-  // $: if (operator === 'checked') {
-  //   condition.operator = 'equal';
-  //   condition.value = 'true';
-  // }
-  // $: if (operator === 'not-checked') {
-  //   condition.operator = 'equal';
-  //   condition.value = 'false';
-  // }
-  $: if (['empty', 'filled'].includes(operator)) delete condition.value;
+  $: if (['empty', 'filled', 'checked', 'not-checked'].includes(operator))
+    delete condition.value;
   $: filteredOperators = operators.filter((operator) =>
     operator.compatibleTypes.includes(type)
   );
