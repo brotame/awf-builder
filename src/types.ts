@@ -62,7 +62,8 @@ export interface Logic {
 export interface Slide {
   title: string;
   content: string;
-  video: string;
+  video1: string;
+  video2: string;
 }
 
 export interface SlidesObj {

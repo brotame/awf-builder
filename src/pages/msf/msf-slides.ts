@@ -14,7 +14,10 @@ const msfSlides: SlidesObj = {
       </ul>
       <p>Simply select all the features that you want to add and the builder will generate the code for you :)<br></p>
       <p>Some functionalities may require a certain setup in Webflow, always check the info before setting them!<br></p>`,
-      video: 'videos/msf/MSF.mp4',
+      video1:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee4654862720cad5da7d_MSF-transcode.mp4',
+      video2:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee4654862720cad5da7d_MSF-transcode.webm',
     },
   ],
   webflowSetup: [
@@ -34,7 +37,10 @@ const msfSlides: SlidesObj = {
       <strong class="underline">required and visible</strong> inputs
       inside it before jumping to the next one.<br />
     </p>`,
-      video: 'videos/msf/Webflow Setup.mp4',
+      video1:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee565486279ea8d5da9a_Webflow Setup-transcode.mp4',
+      video2:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee565486279ea8d5da9a_Webflow Setup-transcode.webm',
     },
   ],
   elements: [
@@ -57,7 +63,10 @@ const msfSlides: SlidesObj = {
       <span class="opacity-75">display:none</span> anywhere inside the
       form.
     </p>`,
-      video: 'videos/msf/Elements.mp4',
+      video1:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee3490d139ddcd925872_Elements-transcode.mp4',
+      video2:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee3490d139ddcd925872_Elements-transcode.webm',
     },
   ],
   alertSelector: [
@@ -93,7 +102,10 @@ const msfSlides: SlidesObj = {
       <span class="opacity-75">1st click</span> to show it and the
       <span class="opacity-75">2nd click</span> to hide it.<br />
     </p>`,
-      video: 'videos/msf/Alert Element.mp4',
+      video1:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43a0a2b1f46811a0ec526e_Alert%20Element-transcode.mp4',
+      video2:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43a0a2b1f46811a0ec526e_Alert%20Element-transcode.webm',
     },
   ],
   backSelector: [
@@ -111,7 +123,10 @@ const msfSlides: SlidesObj = {
       first slide enters and show it when the first slide leaves.<br />
     </p>
     <p>This element can be placed anywhere in the page.<br /></p>`,
-      video: 'videos/msf/Back Button.mp4',
+      video1:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee1122e26a9a3213fcfd_Back Button-transcode.mp4',
+      video2:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee1122e26a9a3213fcfd_Back Button-transcode.webm',
     },
   ],
   alertText: [
@@ -129,7 +144,10 @@ const msfSlides: SlidesObj = {
     >
       Display alert
     </button>`,
-      video: 'videos/msf/Alert Text.mp4',
+      video1:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee0cdb6e8b2c895a3705_Alert Text-transcode.mp4',
+      video2:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee0cdb6e8b2c895a3705_Alert Text-transcode.webm',
     },
   ],
   backText: [
@@ -148,7 +166,10 @@ const msfSlides: SlidesObj = {
       it will fall back to the lower closest one
       <em class="opacity-75">(the 2nd one in this case)</em>.<br />
     </p>`,
-      video: 'videos/msf/Back Text.mp4',
+      video1:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee16ba9928d0613cfdf4_Back Text-transcode.mp4',
+      video2:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee16ba9928d0613cfdf4_Back Text-transcode.webm',
     },
   ],
   nextText: [
@@ -167,7 +188,10 @@ const msfSlides: SlidesObj = {
       it will fall back to the lower closest one
       <em class="opacity-75">(the 2nd one in this case)</em>.<br />
     </p>`,
-      video: 'videos/msf/Next Text.mp4',
+      video1:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee4c877e0acbbcd606ff_Next Text-transcode.mp4',
+      video2:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee4c877e0acbbcd606ff_Next Text-transcode.webm',
     },
   ],
   completedPercentageSelector: [
@@ -182,7 +206,10 @@ const msfSlides: SlidesObj = {
       to 100% in the last step.<br />
     </p>
     <p>This element can be placed anywhere in the page.<br /></p>`,
-      video: 'videos/msf/Completed Percentage.mp4',
+      video1:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee1bdb6e8bc01c5a3710_Completed Percentage-transcode.mp4',
+      video2:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee1bdb6e8bc01c5a3710_Completed Percentage-transcode.webm',
     },
   ],
   currentStepSelector: [
@@ -197,7 +224,10 @@ const msfSlides: SlidesObj = {
       manually as it is a fixed value.<br />
     </p>
     <p>This element can be placed anywhere in the page.<br /></p>`,
-      video: 'videos/msf/Current Step.mp4',
+      video1:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee267778392e5f0fd1e3_Current Step-transcode.mp4',
+      video2:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee267778392e5f0fd1e3_Current Step-transcode.webm',
     },
   ],
   customNav: [
@@ -221,7 +251,10 @@ const msfSlides: SlidesObj = {
       </li>
     </ul>
     <p>This elements can be placed anywhere in the page.<br /></p>`,
-      video: 'videos/msf/Custom Nav.mp4',
+      video1:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee2ab937946f7bdb3864_Custom Nav-transcode.mp4',
+      video2:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee2ab937946f7bdb3864_Custom Nav-transcode.webm',
     },
   ],
   displayValues: [
@@ -245,7 +278,10 @@ const msfSlides: SlidesObj = {
       </li>
     </ul>
     <p>This elements can be placed anywhere in the page.<br /></p>`,
-      video: 'videos/msf/Display Values.mp4',
+      video1:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee2f3f5ea2bb18716185_Display Values-transcode.mp4',
+      video2:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee2f3f5ea2bb18716185_Display Values-transcode.webm',
     },
   ],
   msfGlobal: [
@@ -260,7 +296,10 @@ const msfSlides: SlidesObj = {
       the option. They will be set to
       <span class="opacity-75">display:none</span>.<br />
     </p>`,
-      video: 'videos/msf/Global Options.mp4',
+      video1:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee39b937947cdfdb38e9_Global Options-transcode.mp4',
+      video2:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee39b937947cdfdb38e9_Global Options-transcode.webm',
     },
   ],
   warningClass: [
@@ -282,7 +321,10 @@ const msfSlides: SlidesObj = {
       <strong>Custom</strong> in the Webflow Designer in order to
       display it correctly.<br />
     </p>`,
-      video: 'videos/msf/Warning Class.mp4',
+      video1:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee51a9fec7dce69ba40c_Warning Class-transcode.mp4',
+      video2:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee51a9fec7dce69ba40c_Warning Class-transcode.webm',
     },
   ],
   hiddenForm: [
@@ -309,7 +351,10 @@ const msfSlides: SlidesObj = {
       The script will automatically create the hidden form, populate
       and send it when the user completes the desired step.<br />
     </p>`,
-      video: 'videos/msf/Hidden Form.mp4',
+      video1:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee416621331f88cbbca5_Hidden Form-transcode.mp4',
+      video2:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee416621331f88cbbca5_Hidden Form-transcode.webm',
     },
   ],
 };

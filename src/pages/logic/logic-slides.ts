@@ -15,7 +15,10 @@ const logicSlides: SlidesObj = {
       automatically generated for you!<br />
     </p>
     <p>Check the next steps to see what you can do with it :)<br /></p>`,
-      video: 'videos/logic/Intro.mp4',
+      video1:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee9b27330483f41b4be2_Intro-transcode.mp4',
+      video2:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee9b27330483f41b4be2_Intro-transcode.webm',
     },
     {
       title: 'Single action target',
@@ -33,7 +36,10 @@ const logicSlides: SlidesObj = {
     <p>
       You can show, hide, enable, disable, require or unrequire it.<br />
     </p>`,
-      video: 'videos/logic/Single Action Target.mp4',
+      video1:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43eea0273304c2341b4be3_Single Action Target-transcode.mp4',
+      video2:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43eea0273304c2341b4be3_Single Action Target-transcode.webm',
     },
     {
       title: 'Group action target',
@@ -51,7 +57,10 @@ const logicSlides: SlidesObj = {
       <em>Div Block</em> which ID is
       <span class="opacity-75">contact-info</span>.<br />
     </p>`,
-      video: 'videos/logic/Group Action Target.mp4',
+      video1:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee94877e0a3bf5d60731_Group Action Target-transcode.mp4',
+      video2:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee94877e0a3bf5d60731_Group Action Target-transcode.webm',
     },
     {
       title: 'Action Interactions',
@@ -92,7 +101,10 @@ const logicSlides: SlidesObj = {
       <em>Div Block</em> that has the attribute
       <span class="opacity-75">data-logic=show</span>.
     </p>`,
-      video: 'videos/logic/Action Interactions.mp4',
+      video1:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee8bf4340039b7f3c9f0_Action Interactions-transcode.mp4',
+      video2:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee8bf4340039b7f3c9f0_Action Interactions-transcode.webm',
     },
     {
       title: 'Important!',
@@ -112,7 +124,10 @@ const logicSlides: SlidesObj = {
       <span class="opacity-75">display: flex</span> and
       <span class="opacity-75">opacity: 100%</span>.<br />
     </p>`,
-      video: 'videos/logic/Important.mp4',
+      video1:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee986da478c1e7b0e034_Important-transcode.mp4',
+      video2:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee986da478c1e7b0e034_Important-transcode.webm',
     },
     {
       title: 'Custom interactions',
@@ -133,7 +148,10 @@ const logicSlides: SlidesObj = {
       <span class="opacity-75">show-modal</span> when the conditions
       are met.
     </p>`,
-      video: 'videos/logic/Custom Interactions.mp4',
+      video1:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee90128e383bb89ab0db_Custom Interactions-transcode.mp4',
+      video2:
+        'https://assets.website-files.com/5ee9e5f2c67c989ce5331572/5f43ee90128e383bb89ab0db_Custom Interactions-transcode.webm',
     },
   ],
   submitHiddenInputs: [
@@ -148,7 +166,8 @@ const logicSlides: SlidesObj = {
       affect 3rd party integrations like Zapier, as the form could
       receive different fields depending on user actions.
     </p>`,
-      video: '',
+      video1: '',
+      video2: '',
     },
   ],
   checkConditionsOnLoad: [
@@ -163,7 +182,8 @@ const logicSlides: SlidesObj = {
       <strong>Note:</strong> it is recommended to leave this option
       checked, as not doing so could lead to unexpected behaviours.
     </p>`,
-      video: '',
+      video1: '',
+      video2: '',
     },
   ],
 };

@@ -13,14 +13,15 @@
   export let currentSlide: number,
     title: string,
     content: string,
-    video: string,
+    video1: string,
+    video2: string,
     isLast: boolean;
 
   // Variables
   let videoElement: HTMLMediaElement;
 
   // Reactive
-  $: if (video) restartVideo();
+  $: if (video1) restartVideo();
 
   // Functions
   const dispatch = createEventDispatcher();
@@ -104,7 +105,8 @@
         muted={true}
         playsinline={true}
         bind:this={videoElement}>
-        <source src={video} />
+        <source src={video1} />
+        <source src={video2} />
       </video>
     </div>
   </div>
