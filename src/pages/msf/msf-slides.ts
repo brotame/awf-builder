@@ -25,15 +25,10 @@ const msfSlides: SlidesObj = {
       title: 'Webflow setup',
       content: `<p>
       The slides will act as different steps of your form. You can put
-      how many slides as you want inside the slider.<br />
+      as many slides as you want inside the slider.<br />
     </p>
     <p>
-      Each step will check the required inputs inside it before
-      jumping to the next one.<br />
-    </p>
-    <p>
-      You can put how many slides (steps) as you want inside the
-      slider. Each step will check the
+      Each step will check the
       <strong class="underline">required and visible</strong> inputs
       inside it before jumping to the next one.<br />
     </p>`,
