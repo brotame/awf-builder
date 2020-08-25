@@ -44,7 +44,7 @@ export const logicExport = derived(
 
       logic.conditions.forEach((condition) => {
         if (condition.type === 'radios') {
-          condition.selector = `input[name="${condition.selector}"]:checked`;
+          condition.selector = `input[name="${condition.selector}"]`;
         } else {
           if (!condition.selector.startsWith('#'))
             condition.selector = `#${condition.selector}`;
