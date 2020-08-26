@@ -17,7 +17,7 @@
 <TransitionWrap extraClass="justify-center">
   <section class="section">
     <Hero
-      title="Webflow Advanced Forms"
+      title="Advanced Webflow Forms"
       subtitle={`Welcome to the <strong>beta</strong> version of the Advanced
       Forms Builder. Now you can add multi step functionality and conditional
       logic to your Webflow Forms!<br />Found a bug? Got a request? Let me know
