@@ -11,9 +11,9 @@
 
 <header class="nav-wrap">
   <!-- Logo -->
-  <a href="https://brota.me/" target="_blank" class="logo-wrap w-inline-block">
+  <div class="logo-wrap w-inline-block">
     <Logo class="logo" />
-  </a>
+  </div>
 
   <!-- Nav -->
   <nav class="nav">
