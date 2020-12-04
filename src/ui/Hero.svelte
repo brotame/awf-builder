@@ -35,6 +35,7 @@
     {/if}
     {#if secondaryText}
       <button
+        disabled
         class="button outline w-button"
         on:click={() => {
           dispatch('secondaryclick');
